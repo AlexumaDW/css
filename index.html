@@ -30,6 +30,8 @@
       <li><a href="index.html#selectores-avanzados">Selectores Avanzados</a></li>
       <li><a href="index.html#pseudoclases">Pseudoclases</a></li>
       <li><a href="index.html#pseudoelementos">Pseudoelementos</a></li>
+      <li><a href="index.html#agrupar-selectores">Agrupar Selectores</a></li>
+      <li><a href="index.html#algoritmo-css">El Algoritmo de CSS</a></li>
       <li><a href="index.html#"></a></li>
     </ul>
     <hr>
@@ -375,7 +377,7 @@ background-color: beige;
   </section>
   <section id="pseudoelementos">
     <h2>Pseudoelementos</h2>
-    <p>208</p>
+    <p>208 - 246</p>
     <p><i>Bandai Mith Cloth Ex </i><span class="saga-geminis">Saga de Géminis </span><span
         class="saga-precio">500</span>
     </p>
@@ -385,8 +387,93 @@ background-color: beige;
     <p>
       <input class="input-pseudoelementos" type="text" name="nombre" placeholder="Escribe tu nombre">
     <pre>
-      <code></code>
+      <code>
+        /***************************************Pseudoelementos****************************************/
+
+/* Pseudoelementos - Dan estilo a partes específicas de un elemento, se usa el :: para diferencialos de las pseudoclases */
+
+.saga-geminis::before {
+  content: "🤼‍♀️";
+}
+
+.saga-geminis::after {
+  content: "♊";
+}
+
+.saga-precio::before {
+  content: "💲";
+  font-weight: bold;
+}
+
+.saga-precio::after {
+  content: "USD";
+  font-weight: bold;
+}
+
+.p-pseudoelementos::first-letter {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.p-pseudoelementos::first-line {
+  background-color: coral;
+}
+
+.p-pseudoelementos::selection {
+  background-color: black;
+  color: white;
+}
+
+.input-pseudoelementos::placeholder {
+  background-color: grey;
+}
+      </code>
   </pre>
+    </p>
+    <a href="index.html#temario">👆</a>
+    <hr>
+  </section>
+  <section id="agrupar-selectores">
+    <h2>Agrupar Selectores</h2>
+    <p>248 - 260</p>
+    <form action="" class="form-agrupar-selectores">
+      <input type="text" name="nombre" placeholder="Escribe tu nombre">
+      <input type="email" name="correo" placeholder="Escribe tu correo">
+      <textarea name="comentarios" cols="50" rows="10" placeholder="Escribe un comentario"></textarea>
+      <input type="submit">
+    </form>
+    <p>
+    <pre>
+<code>/*************************************Agrupar-Selectores***************************************/
+          
+.form-agrupar-selectores input[type="text"],
+.form-agrupar-selectores input[type="email"],
+.form-agrupar-selectores textarea {
+border-color: yellow;
+background-color: black;
+font-size: 20px;
+display: block;
+width: 300px;
+border-width: 2px;
+border-style: dashed;
+}</code>
+      </pre>
+    </p>
+    <a href="index.html#temario">👆</a>
+    <hr>
+  </section>
+  <section id="algoritmo-css">
+    <h2>El Algoritmo de CSS</h2>
+    <p>262</p>
+    <ul>
+      <li>La Cáscada</li>
+      <li>La Especificidad</li>
+      <li>La Herencia</li>
+    </ul>
+    <p>
+    <pre>
+    <code></code>
+      </pre>
     </p>
     <a href="index.html#temario">👆</a>
     <hr>
