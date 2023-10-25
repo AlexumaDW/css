@@ -6,10 +6,391 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aprendiendo CSS</title>
   <link rel="stylesheet" href="./css/style.css">
+  <!-- Aplicar style en la cabecera en lo posible evitarlo rompe la especificidad y cascada -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    h1 {
+      color: yellowgreen;
+    }
+  </style>
 </head>
 
 <body>
+  <h1>Aprendiendo CSS</h1>
+  <!-- Aplicar style en línea en lo posible evitarlo rompe la especificidad y cascada-->
+  <p><i style="font-weight: bold; color: orangered;">Cascading style sheets</i> - Hojas de Estilo en Cascada</p>
+  <section id="temario">
+    <h2>Temario del Curso:</h2>
+    <ul>
+      <li><a href="index.html#sintaxis-basica">Sintaxis Básica</a></li>
+      <li><a href="index.html#selectores-basicos">Selectores Básicos</a></li>
+      <li><a href="index.html#selectores-avanzados">Selectores Avanzados</a></li>
+      <li><a href="index.html#pseudoclases">Pseudoclases</a></li>
+      <li><a href="index.html#pseudoelementos">Pseudoelementos</a></li>
+      <li><a href="index.html#"></a></li>
+    </ul>
+    <hr>
+  </section>
+  <section id="sintaxis-basica">
+    <h2>Sintaxis Básica</h2>
+    <p>01 - 16</p>
+    <p>
+    <pre><code>/**************************************Sintaxis Básica*****************************************/
+    
+    /* Regla CSS consta de 2 partes
+    1)El Selector
+    2)El bloque de declaraciones:
+    atributo: valor;
+    atributo-de-mas-de-dos-palabras: otro-valor;
+    */
+    </code></pre>
+    </p>
+    <a href="index.html#temario">👆</a>
+    <hr>
+  </section>
+  <section id="selectores-basicos">
+    <h2>Selectores Básicos</h2>
+    <p>18 - 54</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt modi voluptatem pariatur, quibusdam laboriosam
+      tenetur quam molestiae animi atque ex iste ullam at qui hic quasi illum illo fuga repellat?</p>
+    <p id="parrafo-dos">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, dignissimos eos
+      praesentium ducimus minima sapiente nostrum temporibus amet. Sunt ab est ea aspernatur quae earum voluptatum quod
+      odit molestias quas?</p>
+    <p class="text-32 bg-skyblue">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nihil esse rem
+      perferendis
+      eligendi assumenda beatae, iusto totam molestias fuga ipsam dolore reprehenderit nostrum dignissimos magni eveniet
+      impedit possimus distinctio</p>
+    <p class="text-20 bg-steelblue text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+      blanditiis eius porro! Corrupti laborum, provident, doloremque repellat explicabo aspernatur vitae amet ipsa
+      deleniti nulla natus quisquam veniam ea ipsam earum!</p>
+    <p class="bg-steelblue text-white text-32">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ad vero
+      magnam cum ex qui vel ipsum nam reiciendis dignissimos inventore asperiores aliquam officia reprehenderit, optio
+      eius eveniet at provident!</p>
+    <p>
+    <pre><code>/*************************************Selectores Básicos***************************************/
+          
+      /* Selectores Básicos:
+      1)Etiquetas - Son elementos HTML
+      2)Identificadores - Atributos id - #
+      3)Clases - Atributos class - . */
+      
+      p {
+      color: midnightblue;
+      }
+      
+      /* Dar estilos con Id# se considera un AntiPatrón */
+      #parrafo-dos {
+      background-color: skyblue;
+      }
+      
+      /* Dar estilos con clases nos permite reutilizar código CSS */
+      
+      .bg-skyblue {
+      background-color: skyblue;
+      }
+      
+      .bg-steelblue {
+      background-color: steelblue;
+      }
+      
+      .text-white {
+      color: white;
+      }
+      
+      .text-20 {
+      font-size: 20px;
+      }
+      
+      .text-32 {
+      font-size: 32px;
+      }
+      </code></pre>
+    </p>
+    <a href="index.html#temario">👆</a>
+    <hr>
+  </section>
+  <section id="selectores-avanzados">
+    <h2>Selectores Avanzados</h2>
+    <p>56 - 117</p>
+    <h3>Selectores de hijos</h3>
+    <h4>Selectores de hijos directos</h4>
+    <ul class="hijos-directos">
+      <li><b>Primavera</b></li>
+      <li><b>Verano</b></li>
+      <li><b>Otoño</b></li>
+      <li><b>Invierno</b></li>
+    </ul>
+    <h4>Selectores de hijos descendientes</h4>
+    <ul class="hijos-descendientes">
+      <li><b>Primavera</b></li>
+      <li><b>Verano</b></li>
+      <li><b>Otoño</b></li>
+      <li><b>Invierno</b></li>
+    </ul>
+    <h3>Selectores de hermanos</h3>
+    <h4>Selector de hermanos general</h4>
+    <ul>
+      <li><b>Primavera</b></li>
+      <li class="hermanos-general"><b>Verano</b></li>
+      <li><b>Otoño</b></li>
+      <li><b>Invierno</b></li>
+    </ul>
+    <h4>Selector de hermanos adyacentes</h4>
+    <ul>
+      <li><b>Primavera</b></li>
+      <li class="hermanos-adyacentes"><b>Verano</b></li>
+      <li><b>Otoño</b></li>
+      <li><b>Invierno</b></li>
+    </ul>
+    <h3>Selectores de Atributos</h3>
+    <nav class="selectores-atributos">
+      <ul>
+        <li><a href="https://jonmircha.com" target="_blank">Inicio</a></li>
+        <li><a class="menu-item cursos button" href="https://jonmircha.com/cursos" target="_blank">Cursos</a></li>
+        <li><a href="http://jonmircha.com/blog" target="_blank">Blog</a></li>
+        <li><a class="menu item mentoria button" href="https://jonmircha.com/mentorias" target="_blank">Mentoria</a>
+        </li>
+        <li><a class="menu-item notas button" href="http://jonmircha.com/hola" target="_blank">Hola</a></li>
 
+        <li><a href="index.html">Regresar al temario</a></li>
+      </ul>
+    </nav>
+    <h3>Selector Universal (*)</h3>
+    <ul class="selector-universal">
+      <li><b>Primavera</b></li>
+      <li><b>Verano</b></li>
+      <li><b>Otoño</b></li>
+      <li><b>Invierno</b></li>
+    </ul>
+    <p>
+    <pre><code>
+      /**************************************Selectores Avanzados*****************************************/
+              
+  .hijos-directos>li {
+  background-color: thistle;
+  }
+  
+  .hijos-descendientes b {
+  background-color: thistle;
+  }
+  
+  /* Los selectores de hermanos aplican a los elementos hermanos y que esten por debajo del elemento de referencia */
+  .hermanos-general~li {
+  background-color: thistle;
+  }
+  
+  /* El selector hermano adyacente aplica al elemento que este debajo y sea hermano directo */
+  .hermanos-adyacentes+li {
+  background-color: thistle;
+  }
+  
+  /* Para seleccionar el atributo hay que ponerlo entre [atributo] */
+  .selectores-atributos a[href] {
+  color: orangered;
+  }
+  
+  .selectores-atributos a[target="_blank"] {
+  font-weight: bold;
+  }
+  
+  /* El comodín del * aplica el estilo si contiene el texto en cuestión en cualquier parte */
+  .selectores-atributos a[href*="jonmircha"] {
+  font-size: 24px;
+  }
+  
+  /* El comodín del ^ aplica el estilo si contiene el texto en cuestión al inicio */
+  .selectores-atributos a[href^="http:"] {
+  text-decoration: none;
+  }
+  
+  /* El comodín del $ aplica el estilo si contiene el texto en cuestión al final */
+  .selectores-atributos a[href$=".com"] {
+  background-color: black;
+  }
+  
+  /* El comodín del ~ aplica el estilo si contiene el texto en cuestión en una lista separada por espacios */
+  .selectores-atributos a[class~="cursos"] {
+  background-color: steelblue;
+  }
+  
+  /* El comodín del | aplica el estilo si contiene el texto en cuestión en una lista separada por espacios y que después
+  del texto en cuestión venga un guión medio- */
+  .selectores-atributos a[class|="menu"] {
+  font-style: italic;
+  }
+  
+  /* Selector universal * */
+  * {
+  font-family: sans-serif;
+  }
+  
+  .selector-universal * {
+  font-size: 24px;
+  }
+</code></pre>
+    </p>
+    <a href="index.html#temario">👆</a>
+    <hr>
+  </section>
+  <section id="pseudoclases">
+    <h2>Pseudoclases</h2>
+    <p>119 - 206</p>
+    <form class="form-pseudoclases">
+      <label for="usuario">Usuario:</label>
+      <input type="text" id="usuario" name="usuario" placeholder="Escribe tu Usuario" required><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="correo" placeholder="Escribe tu correoelectronico" required><br>
+      <input type="submit" disabled>
+      <input type="submit">
+    </form>
+    <nav class="menu-pseudoclases">
+      <a href="#seccion1">Sección 1</a>
+      <a href="#seccion2">Sección 2</a>
+      <a href="#seccion3">Sección 3</a>
+      <a href="#seccion4">Sección 4</a>
+    </nav>
+    <p class="p-pseudoclases">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, iusto aliquam eum
+      dolores quam praesentium sed dolore earum quidem sapiente natus ducimus corrupti voluptates soluta possimus
+      tempore nisi exercitationem repellendus?</p>
+    <ol class="lista-pseudoclases">
+      <li>Mú de Aries</li>
+      <li>Aldebaran de Tauro</li>
+      <li>Saga & Kano de Géminis</li>
+      <li>Death Mask de Cáncer</li>
+      <li>Aioria de Leo</li>
+      <li>Shaka de Virgo</li>
+      <li>Dohko de Libra</li>
+      <li>Milo de Escorpión</li>
+      <li>Aioros de Sagitario</li>
+      <li>Shura de Capricornio</li>
+      <li>Camus de Acuario</li>
+      <li>Afrodita de Piscis</li>
+    </ol>
+    <article class="articulos-pseudoclases">
+      <header>Esto es una cabecera</header>
+      <p>Esto es una p</p>
+      <div>Esto es una div</div>
+      <p>Esto es una p</p>
+      <section>Esto es una section</section>
+      <p>Esto es una p</p>
+      <div>Esto es una div</div>
+      <p>Esto es una p</p>
+      <footer>Esto es un footer</footer>
+    </article>
+    <p>
+    <pre>
+/* Pseudoclases dan estilo dependiendo del contexto, posición o estado del elemento */
+
+.form-pseudoclases *:required {
+border-color: yellow;
+/* border-width: thick; */
+}
+
+.form-pseudoclases *:valid {
+border-color: green;
+}
+
+.form-pseudoclases *:invalid {
+border-color: red;
+}
+
+.form-pseudoclases *:focus {
+background-color: skyblue;
+}
+
+.form-pseudoclases *:disabled {
+background-color: pink;
+}
+
+/* Importa el orden :link > active > :visited > :hover */
+.menu-pseudoclases a:visited {
+color: olive;
+}
+
+.menu-pseudoclases a:hover {
+color: orange;
+}
+
+.p-pseudoclases:hover {
+font-size: 20px;
+}
+
+#temario:target {
+background-color: greenyellow;
+}
+
+.lista-pseudoclases li:first-child {
+color: green;
+}
+
+.lista-pseudoclases li:last-child {
+color: pink;
+}
+
+.lista-pseudoclases li:nth-child(3) {
+color: navy;
+}
+
+.lista-pseudoclases li:nth-child(4n) {
+font-size: 20px;
+}
+
+.lista-pseudoclases li:nth-child(3n +1) {
+font-weight: bold;
+}
+
+.lista-pseudoclases li:nth-child(even) {
+background-color: yellow;
+}
+
+.lista-pseudoclases li:nth-child(odd) {
+background-color: orange;
+}
+
+/* Primero en su tipo */
+.articulos-pseudoclases p:first-of-type {
+background-color: pink;
+}
+
+/* Ultimo en su tipo */
+.articulos-pseudoclases p:last-of-type {
+background-color: violet;
+}
+
+
+.articulos-pseudoclases p:nth-of-type(3) {
+background-color: fuchsia;
+}
+
+.articulos-pseudoclases *:not(p) {
+background-color: beige;
+}<code>
+    </code></pre>
+    </p>
+    <a href="index.html#temario">👆</a>
+    <hr>
+  </section>
+  <section id="pseudoelementos">
+    <h2>Pseudoelementos</h2>
+    <p>208</p>
+    <p><i>Bandai Mith Cloth Ex </i><span class="saga-geminis">Saga de Géminis </span><span
+        class="saga-precio">500</span>
+    </p>
+    <p class="p-pseudoelementos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quaerat fugiat
+      necessitatibus molestias quod, omnis mollitia quas at, magni ipsum, dolor cupiditate. Maiores blanditiis natus,
+      quasi nulla dolore esse aliquam?</p>
+    <p>
+      <input class="input-pseudoelementos" type="text" name="nombre" placeholder="Escribe tu nombre">
+    <pre>
+      <code></code>
+  </pre>
+    </p>
+    <a href="index.html#temario">👆</a>
+    <hr>
+  </section>
 </body>
 
 </html>

@@ -1,0 +1,242 @@
+/**************************************Sintaxis Básica*****************************************/
+
+/* Regla CSS consta de 2 partes 
+1)El Selector 
+2)El bloque de declaraciones: 
+atributo: valor;
+atributo-de-mas-de-dos-palabras: otro-valor;
+*/
+
+/* Es una mala práctica usar el @import para importar otros estilos, porque es bloqueante */
+/* @import url("./otra-hoja.css"); */
+
+h1 {
+  color: orangered;
+  background-color: skyblue;
+}
+
+/*************************************Selectores Básicos***************************************/
+
+/* Selectores Básicos:
+1)Etiquetas - Son elementos HTML
+2)Identificadores - Atributos id - # 
+3)Clases - Atributos class - . */
+
+p {
+  color: midnightblue;
+}
+
+/* Dar estilos con Id# se considera un AntiPatrón */
+#parrafo-dos {
+  background-color: skyblue;
+}
+
+/* Dar estilos con clases nos permite reutilizar código CSS */
+
+.bg-skyblue {
+  background-color: skyblue;
+}
+
+.bg-steelblue {
+  background-color: steelblue;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-20 {
+  font-size: 20px;
+}
+
+.text-32 {
+  font-size: 32px;
+}
+
+/************************************Selectores Avanzados**************************************/
+
+.hijos-directos>li {
+  background-color: thistle;
+}
+
+.hijos-descendientes b {
+  background-color: thistle;
+}
+
+/* Los selectores de hermanos aplican a los elementos hermanos y que esten por debajo del elemento de referencia */
+.hermanos-general~li {
+  background-color: thistle;
+}
+
+/* El selector hermano adyacente aplica al elemento que este debajo y sea hermano directo */
+.hermanos-adyacentes+li {
+  background-color: thistle;
+}
+
+/* Para seleccionar el atributo hay que ponerlo entre [atributo] */
+.selectores-atributos a[href] {
+  color: orangered;
+}
+
+.selectores-atributos a[target="_blank"] {
+  font-weight: bold;
+}
+
+/* El comodín del * aplica el estilo si contiene el texto en cuestión en cualquier parte */
+.selectores-atributos a[href*="jonmircha"] {
+  font-size: 24px;
+}
+
+/* El comodín del ^ aplica el estilo si contiene el texto en cuestión al inicio  */
+.selectores-atributos a[href^="http:"] {
+  text-decoration: none;
+}
+
+/* El comodín del $ aplica el estilo si contiene el texto en cuestión al final */
+.selectores-atributos a[href$=".com"] {
+  background-color: black;
+}
+
+/* El comodín del ~ aplica el estilo si contiene el texto en cuestión en una lista separada por espacios */
+.selectores-atributos a[class~="cursos"] {
+  background-color: steelblue;
+}
+
+/* El comodín del | aplica el estilo si contiene el texto en cuestión en una lista separada por espacios y que después del texto en cuestión venga un guión medio- */
+.selectores-atributos a[class|="menu"] {
+  font-style: italic;
+}
+
+/* Selector universal * */
+* {
+  font-family: sans-serif;
+}
+
+.selector-universal * {
+  font-size: 24px;
+}
+
+/**************************************Pseudoclases********************************************/
+
+/* Pseudoclases dan estilo dependiendo del contexto, posición o estado del elemento */
+
+.form-pseudoclases *:required {
+  border-color: yellow;
+  /* border-width: thick; */
+}
+
+.form-pseudoclases *:valid {
+  border-color: green;
+}
+
+.form-pseudoclases *:invalid {
+  border-color: red;
+}
+
+.form-pseudoclases *:focus {
+  background-color: skyblue;
+}
+
+.form-pseudoclases *:disabled {
+  background-color: pink;
+}
+
+/* Importa el orden :link > active > :visited > :hover */
+.menu-pseudoclases a:visited {
+  color: olive;
+}
+
+.menu-pseudoclases a:hover {
+  color: orange;
+}
+
+.p-pseudoclases:hover {
+  font-size: 20px;
+}
+
+#temario:target {
+  background-color: greenyellow;
+}
+
+.lista-pseudoclases li:first-child {
+  color: green;
+}
+
+.lista-pseudoclases li:last-child {
+  color: pink;
+}
+
+.lista-pseudoclases li:nth-child(3) {
+  color: navy;
+}
+
+.lista-pseudoclases li:nth-child(4n) {
+  font-size: 20px;
+}
+
+.lista-pseudoclases li:nth-child(3n +1) {
+  font-weight: bold;
+}
+
+.lista-pseudoclases li:nth-child(even) {
+  background-color: yellow;
+}
+
+.lista-pseudoclases li:nth-child(odd) {
+  background-color: orange;
+}
+
+/* Primero en su tipo */
+.articulos-pseudoclases p:first-of-type {
+  background-color: pink;
+}
+
+/* Ultimo en su tipo */
+.articulos-pseudoclases p:last-of-type {
+  background-color: violet;
+}
+
+
+.articulos-pseudoclases p:nth-of-type(3) {
+  background-color: fuchsia;
+}
+
+.articulos-pseudoclases *:not(p) {
+  background-color: beige;
+}
+
+/***************************************Pseudoelementos****************************************/
+
+/* Pseudoelementos - Dan estilo a partes específicas de un elemento, se usa el :: para diferencialos de las pseudoclases */
+
+.saga-geminis::before {
+  content: "🤼‍♀️";
+}
+
+.saga-geminis::after {
+  content: "♊";
+}
+
+.saga-precio::before {
+  content: "💲";
+  font-weight: bold;
+}
+
+.saga-precio::after {
+  content: "USD";
+  font-weight: bold;
+}
+
+.p-pseudoelementos::first-letter {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.p-pseudoelementos::first-line {
+  background-color: coral;
+}
+
+.p-pseudoelementos::selection {
+  background-color: black;
+  color: white;
+}
