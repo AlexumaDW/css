@@ -21,6 +21,10 @@
       <li><a href="box-model.html#caja-linea-caja-bloque">Caja de Línea vs Caja de Bloque</a></li>
       <li><a href="box-model.html#propiedad-display">Propiedad Display</a></li>
       <li><a href="box-model.html#propiedad-visibility">Propiedad Visibility</a></li>
+      <li><a href="box-model.html#propiedad-overflow">Propiedad Overflow</a></li>
+      <li><a href="box-model.html#tamanio-caja">Tamaño de Cajas</a></li>
+      <li><a href="box-model.html#propiedad-float-clear">Propiedad Float y Clear</a></li>
+      <li><a href="box-model.html#colapso-margenes-verticales">Colapso de Márgenes Verticales</a></li>
       <li><a href="box-model.html#"></a></li>
     </ul>
     <hr>
@@ -112,7 +116,8 @@
     Cajas de Bloque
     - Ocupan todo el ancho disponible, lo que genera saltos de línea.
     - Tienen dimensiones modificables (alto, ancho)
-    - No permiten otros elementos a su lado (aunque especifique un anchi, siguen ocupando todo el espacio disponible a lo
+    - No permiten otros elementos a su lado (aunque especifique un ancho, 
+    siguen ocupando todo el espacio disponible a lo
     ancho generando saltos de línea). */
     
     .caja-linea,
@@ -234,7 +239,174 @@
   </section>
   <section id="propiedad-visibility">
     <h2>Propiedad Visibility</h2>
-    <p>138 - </p>
+    <p>138 - 153</p>
+    <div class="caja-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quo blanditiis illum sequi
+      officiis doloremque cupiditate quia tenetur? Velit inventore fugit iusto, ipsum architecto quos odio fugiat cumque
+      nostrum aspernatur?</div>
+    <div class="caja-hidden">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi dicta reiciendis atque
+      maxime molestiae facere, expedita similique voluptatem. Iure unde non laborum nobis quae, amet enim totam
+      consequuntur excepturi a!</div>
+    <p>
+    <pre><code>/************************************Propiedad Visibility**************************************/
+    
+    .caja-hidden,
+    .caja-normal {
+    background-color: darkolivegreen;
+    color: white;
+    padding: 0 16px;
+    margin: 20px 0;
+    width: 600px;
+    height: 300px;
+    border: medium solid black;
+    }
+    
+    .caja-hidden {
+    visibility: hidden;
+    }</code></pre>
+    </p>
+    <a href="box-model.html#temario-box-model">👆</a>
+    <hr>
+  </section>
+  <section id="propiedad-overflow">
+    <h2>Propiedad Overflow</h2>
+    <p>155 - 166</p>
+    <p class="overflow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil cumque debitis sunt vero ea odio
+      recusandae, odit voluptate esse facilis veritatis illum eos et deserunt. Consequuntur vel amet architecto
+      incidunt!</p>
+    <p>
+    <pre><code>/************************************Propiedad Overflow**************************************/
+    
+    .overflow {
+    width: 200px;
+    background-color: turquoise;
+    height: 100px;
+    overflow: hidden;
+    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    overflow: auto;
+    }</code></pre>
+    </p>
+    <a href="box-model.html#temario-box-model">👆</a>
+    <hr>
+  </section>
+  <section id="tamanio-caja">
+    <h2>Tamaño de Cajas</h2>
+    <p>168 - 220</p>
+    <div class="box-sizing-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi temporibus quis
+      voluptates earum iure est reiciendis. Quae sapiente ratione nam deserunt, provident labore dolore aliquid?
+      Voluptatibus amet cumque fugiat a!</div>
+    <div class="box-sizing-border">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi temporibus quis
+      voluptates earum iure est reiciendis. Quae sapiente ratione nam deserunt, provident labore dolore aliquid?
+      Voluptatibus amet cumque fugiat a!</div>
+    <article class="container-col-3">
+      <section class="item">Sección 1</section>
+      <section class="item">Sección 2</section>
+      <section class="item">Sección 3</section>
+    </article>
+    <p>
+    <pre><code>/***************************************Tamaño de Caja*****************************************/
+    
+    .box-sizing-content,
+    .box-sizing-border {
+    background-color: deepskyblue;
+    width: 500px;
+    height: 250px;
+    }
+    
+    .box-sizing-content {
+    box-sizing: content-box;
+    padding: 10px;
+    /* w 500px + 10 + 10 = 520 */
+    /* h 250px + 10 + 10 = 270 */
+    border: 5px solid red;
+    /* w 500px + 10 + 10 + 5 + 5 = 530 */
+    /* h 250px + 10 + 10 + 5 + 5 = 280 */
+    margin-bottom: 10px;
+    }
+    
+    .box-sizing-border {
+    box-sizing: border-box;
+    padding: 10px;
+    /* w 500px + 0 + 0 = 500 */
+    /* h 250px + 0 + 0 = 200 */
+    border: 5px solid red;
+    /* w 500px + 0 + 0 + 0 + 0 = 500 */
+    /* h 250px + 0 + 0 + 0 + 0 = 200 */
+    }
+    
+    .container-col-3 {
+    background-color: burlywood;
+    margin-top: 20px;
+    height: 300px;
+    width: 600px;
+    }
+    
+    .container-col-3>* {
+    width: 200px;
+    border: thin solid red;
+    float: left;
+    box-sizing: border-box;
+    }
+    
+    html {
+    box-sizing: border-box;
+    }
+    
+    *,
+    *::after,
+    *::before {
+    box-sizing: inherit;
+    }</code></pre>
+    </p>
+    <a href="box-model.html#temario-box-model">👆</a>
+    <hr>
+  </section>
+  </section>
+  <section id="propiedad-float-clear">
+    <h2>Propiedad Float y Clear</h2>
+    <p>222 - 238</p>
+    <article class="container-floats">
+      <section class="float-right">Este elemento flota a la derecha</section>
+
+      <section class="float-left">Este elemento flota a la izquierda</section>
+    </article>
+    <div class="clearfix"></div>
+    <article>
+      <section class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, debitis ex aliquid
+        consequatur veritatis sunt harum corporis nihil labore, saepe neque! Omnis tempora possimus necessitatibus
+        tenetur, numquam cum libero a.</section>
+    </article>
+    <p>
+    <pre><code>/*************************************Propiedad Float y Clear**********************************/
+    
+    .container-floats {
+    background-color: cornflowerblue;
+    }
+    
+    .float-right {
+    float: right;
+    }
+    
+    .float-left {
+    float: left;
+    }
+    
+    .clearfix {
+    clear: both;
+    }</code></pre>
+    </p>
+    <a href="box-model.html#temario-box-model">👆</a>
+    <hr>
+  </section>
+  <section id="colapso-margenes-verticales">
+    <h2>Colapso de Márgenes Verticales</h2>
+    <p>240 - </p>
+    <article class="margin-collapse">
+      <section class="seccion-uno">Sección 1</section>
+      <section class="seccion-dos">Sección 2</section>
+      <section><span>Span 1</span><span>Span 2</span><span>Span 3</span></section>
+    </article>
     <p>
     <pre><code></code></pre>
     </p>
