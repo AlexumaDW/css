@@ -58,3 +58,34 @@ Estás 5 propiedades no funcionan con el valor static.*/
 }
 
 /*******************************Posicionamiento Absolute***************************************/
+
+/* absolute: El elemento pierde sus dimensiones y posición original en el flujo del documento. Si se mueve puede tomar como referencia 2 elementos:
+1) El primer ancestro con posicionamiento relativo
+2) Sino encuentra un ancestro relativo, se mueve respecto del documento HTML */
+
+.absolute {
+  background-color: tomato;
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  /* top: 0;
+  left: 0; */
+  right: 0;
+  bottom: 0;
+}
+
+.relative-parent {
+  background-color: khaki;
+  width: 600px;
+  height: 100px;
+  position: relative;
+}
+
+.absolute-child {
+  background-color: lightgreen;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
