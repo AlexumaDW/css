@@ -251,6 +251,9 @@ html {
 
 .margin-collapse span {
   display: inline-block;
-  /* margin-right: 16px; */
+  margin-right: 16px;
+  margin-left: 16px;
   border: thin solid black;
 }
+
+/**************************************Centrado de Cajas************************************/
