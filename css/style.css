@@ -274,4 +274,61 @@ La Cáscada es el mecanismo en que el navegador aplica los estilos. Y toma en cu
 - Los estilos del autor.
 2) La Especificidad del Selector
 3) Orden de Aparición
+
+La Especificidad es el peso que tiene un selector cuando hay conflicto de estilos. Se calcula de la siguiente forma:
+Etiquetas y pseudoelementos------------0,0,0,1
+Clases, atributos y pseudoclases-------0,0,1,0
+Identificadores------------------------0,1,0,0
+Estilos en línea-----------------------1,0,0,0
+!important--------------Rompe la especificidad
+
+La Herencia, es la capacidad de un selector de obtener (heredar) los valores de sus ancestros más cercanos, para aplicarla se usa el valor inherit, si queremos evitarla podemos asignar otro valor o inicializar la propiedad en cuestión con el valor initial
 */
+
+blockquote#cita-marco.cita-marco {
+  background-color: lightsteelblue;
+}
+
+blockquote {
+  background-color: burlywood;
+}
+
+#cita-marco {
+  background-color: lightgreen;
+}
+
+blockquote.cita-marco {
+  background-color: tomato;
+}
+
+.cita-marco {
+  background-color: cornflowerblue;
+}
+
+
+blockquote#cita-marco {
+  background-color: lightsalmon;
+}
+
+.cita-marco {
+  background-color: mediumaquamarine !important;
+  background-color: darkorange !important;
+  font-size: 32px;
+  border-style: dotted;
+  border-color: red;
+}
+
+.cita-marco cite {
+  background-color: inherit;
+  font-size: initial;
+  border-style: inherit;
+  border-color: inherit;
+}
+
+/*******************************Prefijos de los Navegadores************************************/
+
+/* Prefijos de los navegadores
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none; */

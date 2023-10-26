@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aprendiendo CSS</title>
+  <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
   <!-- Aplicar style en la cabecera en lo posible evitarlo rompe la especificidad y cascada -->
   <style>
@@ -19,10 +20,10 @@
 </head>
 
 <body>
-  <h1>Aprendiendo CSS</h1>
-  <!-- Aplicar style en línea en lo posible evitarlo rompe la especificidad y cascada-->
-  <p><i style="font-weight: bold; color: orangered;">Cascading style sheets</i> - Hojas de Estilo en Cascada</p>
   <section id="temario">
+    <h1>Aprendiendo CSS</h1>
+    <!-- Aplicar style en línea en lo posible evitarlo rompe la especificidad y cascada-->
+    <p><i style="font-weight: bold; color: orangered;">Cascading style sheets</i> - Hojas de Estilo en Cascada</p>
     <h2>Temario del Curso:</h2>
     <ul>
       <li><a href="index.html#sintaxis-basica">Sintaxis Básica</a></li>
@@ -32,6 +33,8 @@
       <li><a href="index.html#pseudoelementos">Pseudoelementos</a></li>
       <li><a href="index.html#agrupar-selectores">Agrupar Selectores</a></li>
       <li><a href="index.html#algoritmo-css">El Algoritmo de CSS</a></li>
+      <li><a href="index.html#prefijo-navegadores">Prefijo de los Navegadores</a></li>
+      <li><a href="box-model.html">Modelo de Caja en CSS</a></li>
       <li><a href="index.html#"></a></li>
     </ul>
     <hr>
@@ -40,14 +43,14 @@
     <h2>Sintaxis Básica</h2>
     <p>01 - 16</p>
     <p>
-    <pre><code>/**************************************Sintaxis Básica*****************************************/
+    <pre><code> /**************************************Sintaxis Básica*****************************************/
     
-    /* Regla CSS consta de 2 partes
-    1)El Selector
-    2)El bloque de declaraciones:
-    atributo: valor;
-    atributo-de-mas-de-dos-palabras: otro-valor;
-    */
+  /* Regla CSS consta de 2 partes
+  1)El Selector
+  2)El bloque de declaraciones:
+  atributo: valor;
+  atributo-de-mas-de-dos-palabras: otro-valor;
+  */
     </code></pre>
     </p>
     <a href="index.html#temario">👆</a>
@@ -72,43 +75,43 @@
       magnam cum ex qui vel ipsum nam reiciendis dignissimos inventore asperiores aliquam officia reprehenderit, optio
       eius eveniet at provident!</p>
     <p>
-    <pre><code>/*************************************Selectores Básicos***************************************/
-          
-      /* Selectores Básicos:
-      1)Etiquetas - Son elementos HTML
-      2)Identificadores - Atributos id - #
-      3)Clases - Atributos class - . */
+    <pre><code> /*************************************Selectores Básicos***************************************/
       
-      p {
-      color: midnightblue;
-      }
-      
-      /* Dar estilos con Id# se considera un AntiPatrón */
-      #parrafo-dos {
-      background-color: skyblue;
-      }
-      
-      /* Dar estilos con clases nos permite reutilizar código CSS */
-      
-      .bg-skyblue {
-      background-color: skyblue;
-      }
-      
-      .bg-steelblue {
-      background-color: steelblue;
-      }
-      
-      .text-white {
-      color: white;
-      }
-      
-      .text-20 {
-      font-size: 20px;
-      }
-      
-      .text-32 {
-      font-size: 32px;
-      }
+  /* Selectores Básicos:
+  1)Etiquetas - Son elementos HTML
+  2)Identificadores - Atributos id - #
+  3)Clases - Atributos class - . */
+  
+  p {
+  color: midnightblue;
+  }
+  
+  /* Dar estilos con Id# se considera un AntiPatrón */
+  #parrafo-dos {
+  background-color: skyblue;
+  }
+  
+  /* Dar estilos con clases nos permite reutilizar código CSS */
+  
+  .bg-skyblue {
+  background-color: skyblue;
+  }
+  
+  .bg-steelblue {
+  background-color: steelblue;
+  }
+  
+  .text-white {
+  color: white;
+  }
+  
+  .text-20 {
+  font-size: 20px;
+  }
+  
+  .text-32 {
+  font-size: 32px;
+  }
       </code></pre>
     </p>
     <a href="index.html#temario">👆</a>
@@ -283,93 +286,95 @@
       <footer>Esto es un footer</footer>
     </article>
     <p>
-    <pre>
-/* Pseudoclases dan estilo dependiendo del contexto, posición o estado del elemento */
+    <pre><code>
+  /**************************************Pseudoclases********************************************/
 
-.form-pseudoclases *:required {
-border-color: yellow;
-/* border-width: thick; */
-}
+  /* Pseudoclases dan estilo dependiendo del contexto, posición o estado del elemento */
 
-.form-pseudoclases *:valid {
-border-color: green;
-}
+  .form-pseudoclases *:required {
+  border-color: yellow;
+  /* border-width: thick; */
+  }
 
-.form-pseudoclases *:invalid {
-border-color: red;
-}
+  .form-pseudoclases *:valid {
+  border-color: green;
+  }
 
-.form-pseudoclases *:focus {
-background-color: skyblue;
-}
+  .form-pseudoclases *:invalid {
+  border-color: red;
+  }
 
-.form-pseudoclases *:disabled {
-background-color: pink;
-}
+  .form-pseudoclases *:focus {
+  background-color: skyblue;
+  }
 
-/* Importa el orden :link > active > :visited > :hover */
-.menu-pseudoclases a:visited {
-color: olive;
-}
+  .form-pseudoclases *:disabled {
+  background-color: pink;
+  }
 
-.menu-pseudoclases a:hover {
-color: orange;
-}
+  /* Importa el orden :link > active > :visited > :hover */
+  .menu-pseudoclases a:visited {
+  color: olive;
+  }
 
-.p-pseudoclases:hover {
-font-size: 20px;
-}
+  .menu-pseudoclases a:hover {
+  color: orange;
+  }
 
-#temario:target {
-background-color: greenyellow;
-}
+  .p-pseudoclases:hover {
+  font-size: 20px;
+  }
 
-.lista-pseudoclases li:first-child {
-color: green;
-}
+  #temario:target {
+  background-color: greenyellow;
+  }
 
-.lista-pseudoclases li:last-child {
-color: pink;
-}
+  .lista-pseudoclases li:first-child {
+  color: green;
+  }
 
-.lista-pseudoclases li:nth-child(3) {
-color: navy;
-}
+  .lista-pseudoclases li:last-child {
+  color: pink;
+  }
 
-.lista-pseudoclases li:nth-child(4n) {
-font-size: 20px;
-}
+  .lista-pseudoclases li:nth-child(3) {
+  color: navy;
+  }
 
-.lista-pseudoclases li:nth-child(3n +1) {
-font-weight: bold;
-}
+  .lista-pseudoclases li:nth-child(4n) {
+  font-size: 20px;
+  }
 
-.lista-pseudoclases li:nth-child(even) {
-background-color: yellow;
-}
+  .lista-pseudoclases li:nth-child(3n +1) {
+  font-weight: bold;
+  }
 
-.lista-pseudoclases li:nth-child(odd) {
-background-color: orange;
-}
+  .lista-pseudoclases li:nth-child(even) {
+  background-color: yellow;
+  }
 
-/* Primero en su tipo */
-.articulos-pseudoclases p:first-of-type {
-background-color: pink;
-}
+  .lista-pseudoclases li:nth-child(odd) {
+  background-color: orange;
+  }
 
-/* Ultimo en su tipo */
-.articulos-pseudoclases p:last-of-type {
-background-color: violet;
-}
+  /* Primero en su tipo */
+  .articulos-pseudoclases p:first-of-type {
+  background-color: pink;
+  }
+
+  /* Ultimo en su tipo */
+  .articulos-pseudoclases p:last-of-type {
+  background-color: violet;
+  }
 
 
-.articulos-pseudoclases p:nth-of-type(3) {
-background-color: fuchsia;
-}
+  .articulos-pseudoclases p:nth-of-type(3) {
+  background-color: fuchsia;
+  }
 
-.articulos-pseudoclases *:not(p) {
-background-color: beige;
-}<code>
+  .articulos-pseudoclases *:not(p) {
+  background-color: beige;
+  }
     </code></pre>
     </p>
     <a href="index.html#temario">👆</a>
@@ -390,43 +395,43 @@ background-color: beige;
       <code>
         /***************************************Pseudoelementos****************************************/
 
-/* Pseudoelementos - Dan estilo a partes específicas de un elemento, se usa el :: para diferencialos de las pseudoclases */
+  /* Pseudoelementos - Dan estilo a partes específicas de un elemento, se usa el :: para diferencialos de las pseudoclases */
 
-.saga-geminis::before {
-  content: "🤼‍♀️";
-}
+  .saga-geminis::before {
+    content: "🤼‍♀️";
+  }
 
-.saga-geminis::after {
-  content: "♊";
-}
+  .saga-geminis::after {
+    content: "♊";
+  }
 
-.saga-precio::before {
-  content: "💲";
-  font-weight: bold;
-}
+  .saga-precio::before {
+    content: "💲";
+    font-weight: bold;
+  }
 
-.saga-precio::after {
-  content: "USD";
-  font-weight: bold;
-}
+  .saga-precio::after {
+    content: "USD";
+    font-weight: bold;
+  }
 
-.p-pseudoelementos::first-letter {
-  font-weight: bold;
-  font-size: 32px;
-}
+  .p-pseudoelementos::first-letter {
+    font-weight: bold;
+    font-size: 32px;
+  }
 
-.p-pseudoelementos::first-line {
-  background-color: coral;
-}
+  .p-pseudoelementos::first-line {
+    background-color: coral;
+  }
 
-.p-pseudoelementos::selection {
-  background-color: black;
-  color: white;
-}
+  .p-pseudoelementos::selection {
+    background-color: black;
+    color: white;
+  }
 
-.input-pseudoelementos::placeholder {
-  background-color: grey;
-}
+  .input-pseudoelementos::placeholder {
+    background-color: grey;
+  }
       </code>
   </pre>
     </p>
@@ -444,19 +449,19 @@ background-color: beige;
     </form>
     <p>
     <pre>
-<code>/*************************************Agrupar-Selectores***************************************/
-          
-.form-agrupar-selectores input[type="text"],
-.form-agrupar-selectores input[type="email"],
-.form-agrupar-selectores textarea {
-border-color: yellow;
-background-color: black;
-font-size: 20px;
-display: block;
-width: 300px;
-border-width: 2px;
-border-style: dashed;
-}</code>
+  <code>/*************************************Agrupar-Selectores***************************************/
+            
+  .form-agrupar-selectores input[type="text"],
+  .form-agrupar-selectores input[type="email"],
+  .form-agrupar-selectores textarea {
+  border-color: yellow;
+  background-color: black;
+  font-size: 20px;
+  display: block;
+  width: 300px;
+  border-width: 2px;
+  border-style: dashed;
+  }</code>
       </pre>
     </p>
     <a href="index.html#temario">👆</a>
@@ -464,16 +469,112 @@ border-style: dashed;
   </section>
   <section id="algoritmo-css">
     <h2>El Algoritmo de CSS</h2>
-    <p>262</p>
-    <ul>
+    <p>262 - 326</p>
+    <ol>
       <li>La Cáscada</li>
       <li>La Especificidad</li>
       <li>La Herencia</li>
-    </ul>
+    </ol>
+    <blockquote class="cita-marco" id="cita-marco" style="background-color: rebeccapurple;">
+      Sé tolerante con los demás y estricto contigo mismo <cite>Marco Aurelio</cite>
+    </blockquote>
     <p>
     <pre>
-    <code></code>
+      <code>/***************************************Algoritmo CSS******************************************/
+      
+  /* El Algoritmo de CSS : Es la forma en que el navegador aplica los estilos al documento HTML. Es vital entender eset
+  concepto para que entiendas como se aplican y en algunas ocasiones se sobreescriben las reglas CSS.
+
+  1) La Cáscada.
+  2) La Especificidad.
+  3) La Herencia.
+
+  La Cáscada es el mecanismo en que el navegador aplica los estilos. Y toma en cuenta lo siguiente en este orden:
+  1) El Origen del Código:
+  - El User Agent (los estilos por defecto del navegador)
+  - Personalizaciones del usuario.
+  - Los estilos del autor.
+  2) La Especificidad del Selector
+  3) Orden de Aparición
+
+  La Especificidad es el peso que tiene un selector cuando hay conflicto de estilos. Se calcula de la siguiente forma:
+  Etiquetas y pseudoelementos------------0,0,0,1
+  Clases, atributos y pseudoclases-------0,0,1,0
+  Identificadores------------------------0,1,0,0
+  Estilos en línea-----------------------1,0,0,0
+  !important--------------Rompe la especificidad
+
+  La Herencia, es la capacidad de un selector de obtener (heredar) los valores de sus ancestros más cercanos, para
+  aplicarla se usa el valor inherit, si queremos evitarla podemos asignar otro valor o inicializar la propiedad en
+  cuestión con el valor initial
+  */
+
+  blockquote#cita-marco.cita-marco {
+  background-color: lightsteelblue;
+  }
+
+  blockquote {
+  background-color: burlywood;
+  }
+
+  #cita-marco {
+  background-color: lightgreen;
+  }
+
+  blockquote.cita-marco {
+  background-color: tomato;
+  }
+
+  .cita-marco {
+  background-color: cornflowerblue;
+  }
+
+
+  blockquote#cita-marco {
+  background-color: lightsalmon;
+  }
+
+  .cita-marco {
+  background-color: mediumaquamarine !important;
+  background-color: darkorange !important;
+  font-size: 32px;
+  border-style: dotted;
+  border-color: red;
+  }
+
+  .cita-marco cite {
+  background-color: inherit;
+  font-size: initial;
+  border-style: inherit;
+  border-color: inherit;
+  }
+</code>
       </pre>
+    </p>
+    <a href="index.html#temario">👆</a>
+    <hr>
+  </section>
+  <section id="prefijo-navegadores">
+    <h2>Prefijo de los Navegadores</h2>
+    <ul>
+      <li>Navegadores de Microsoft <code><b>-ms-</b></code></li>
+      <li>Firefox <code><b>-moz-</b></code></li>
+      <li>Todos los demás navegadores <code><b>-webkit-</b></code></li>
+    </ul>
+    <p>328 - 334</p>
+
+    <p>
+    <pre>
+        <code>
+  /*******************************Prefijos de los Navegadores************************************/
+
+  /* Prefijos de los navegadores
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; */
+    </code>
+          </pre>
     </p>
     <a href="index.html#temario">👆</a>
     <hr>
