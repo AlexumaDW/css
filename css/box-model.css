@@ -1,0 +1,138 @@
+/* Modelo de Caja: Es la forma en que CSS ve a los elementos HTML y ¿Cómo los ve? Como si fueran cajas con las siguientes propiedades:
+1) El Contenido (content): El Contenido (texto) del elemento HTML, tomando en cuenta sus dimensiones (width & height)
+2) El borde (border): Lo que delimita cada uno de los elementos HTML
+3) EL relleno (padding): Son las distancias internas (La distancia del borde al contenido)
+4) El márgen (margin): SOn las distancias externas (La distancia entre el elemento HTML y sus elementos hermanos o padres)
+
+Dentro del modelo de caja hay que considerar que una caja tendrá 4 lados:
+1. Arriba (top)
+2. Derecha (right)
+3. Abajo (bottom)
+4. Izquierda (left)
+*/
+
+/*****************************************Border***********************************************/
+
+.border {
+  width: 400px;
+  height: 200px;
+  /* Propiedades de tipo shorthand*/
+  border-style: solid;
+  /*thin = 1px medium = 3px thick = 5px*/
+  border-width: thin;
+  border-color: burlywood;
+  /* Propiedades de tipo shorthand*/
+  border: 2px dashed blue;
+}
+
+/**************************************Margin y Padding****************************************/
+
+.caja-uno,
+.caja-dos {
+  background-color: chocolate;
+  border: medium solid orange;
+  /* Propiedades de tipo shorthand*/
+  padding: 20px;
+  /* Propiedades de tipo shorthand*/
+  margin: 20px;
+  /* Esto aplica para margin y padding 
+  1valor: Aplica a los 4 lados*/
+  padding: 40px;
+  margin: 40px;
+  /*2valores: Primer valor para los lados verticales
+              Segundo valor es para los lados horizontales*/
+  margin: 20px 40px;
+  padding: 20px 40px;
+  /*3valores: Primer valor para top
+              Segundo valor es para los lados horizontales
+              Tercer valor es para bottom*/
+  margin: 20px 40px 20px;
+  padding: 20px 40px 20px;
+  /*3valores: Primer valor para top
+              Segundo valor es para derecha
+              Tercer valor es para bottom
+              Cuarto valor es para izquierda*/
+  margin: 20px 40px 20px 40px;
+  padding: 20px 40px 20px 40px;
+}
+
+/*****************************Cajas de Línea vs Cajas de Bloque********************************/
+
+/* Cajas de Línea
+- Ocupan el espacio necesario para mostrar su contenido.
+- No tienen dimensiones modificables (alto, ancho)
+- Permiten otros elementos a su lado.
+- Padding y Margin solo empujan a elementos adyacentes en el horizontal, NUNCA EN VERTICAL.
+Cajas de Bloque
+- Ocupan todo el ancho disponible, lo que genera saltos de línea.
+- Tienen dimensiones modificables (alto, ancho)
+- No permiten otros elementos a su lado (aunque especifique un anchi, siguen ocupando todo el espacio disponible a lo ancho generando saltos de línea). */
+
+.caja-linea,
+.caja-bloque {
+  background-color: orange;
+  width: 500px;
+  height: 300px;
+  padding: 16px;
+  border: medium solid black;
+}
+
+.caja-linea {
+  margin: 48px;
+}
+
+.caja-bloque {
+  margin: 32px;
+}
+
+/*************************************Propiedad Display****************************************/
+
+/* Propiedad Display
+inline
+block
+inline-block - Se comporta como un elemento de línea pero acepta modificar sus dimensiones (alto, ancho)
+none
+table
+list-item
+flex - Ve mi curso de Flexbox
+grid - Ve mi curso de Grid CSS
+*/
+
+.caja-display-uno,
+.caja-display-dos {
+  background-color: orange;
+  width: 500px;
+  height: 300px;
+  padding: 16px;
+  border: medium solid black;
+  margin: 20px;
+}
+
+.caja-display-uno {
+  display: block;
+}
+
+.caja-display-dos {
+  display: inline;
+}
+
+.caja-none,
+.caja-linea-bloque {
+  background-color: darkolivegreen;
+  color: white;
+  padding: 0 16px;
+  margin: 20px 0;
+  width: 600px;
+  height: 300px;
+  border: medium solid black;
+}
+
+.caja-linea-bloque {
+  display: inline-block;
+}
+
+.caja-none {
+  display: none;
+}
+
+/************************************Propiedad Visibility**************************************/

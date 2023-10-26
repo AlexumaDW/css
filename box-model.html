@@ -16,19 +16,241 @@
     <ul>
 
       <li><a href="index.html#temario">Volver al Temario Principal</a></li>
+      <li><a href="box-model.html#border">Border</a></li>
+      <li><a href="box-model.html#margin-padding">Margin y Padding</a></li>
+      <li><a href="box-model.html#caja-linea-caja-bloque">Caja de Línea vs Caja de Bloque</a></li>
+      <li><a href="box-model.html#propiedad-display">Propiedad Display</a></li>
+      <li><a href="box-model.html#propiedad-visibility">Propiedad Visibility</a></li>
       <li><a href="box-model.html#"></a></li>
     </ul>
     <hr>
   </section>
-  <section id="">
-    <h2></h2>
-    <p>0</p>
+  <section id="border">
+    <h2>Border</h2>
+    <p>14 - 26</p>
+    <p class="border">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum cumque voluptatum sequi nemo!
+      Molestias, ipsum
+      repellendus nisi cumque vitae provident laudantium consectetur, maxime unde debitis dolore tempora ad, accusantium
+      animi.</p>
+    <p>
+    <pre><code>/*****************************************Border***********************************************/
+    
+    .border {
+    width: 400px;
+    height: 200px;
+    /* Propiedades de tipo shorthand*/
+    border-style: solid;
+    /*thin = 1px medium = 3px thick = 5px*/
+    border-width: thin;
+    border-color: burlywood;
+    /* Propiedades de tipo shorthand*/
+    border: 2px dashed blue;
+    }
+</code></pre>
+    </p>
+    <a href="box-model.html#temario-box-model">👆</a>
+    <hr>
+  </section>
+  <section id="margin-padding">
+    <h2>Margin y Padding</h2>
+    <p>28 - 57</p>
+    <div class="caja-uno">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet veniam quae cum. Ea tempore
+      unde soluta nobis fuga amet excepturi et aperiam blanditiis aspernatur, officiis, distinctio ex veniam earum
+      aliquid.</div>
+    <div class="caja-dos">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet veniam quae cum. Ea tempore
+      unde soluta nobis fuga amet excepturi et aperiam blanditiis aspernatur, officiis, distinctio ex veniam earum
+      aliquid.</div>
+    <p>
+    <pre><code>/**************************************Margin y Padding****************************************/
+    
+    .caja-uno,
+    .caja-dos {
+    background-color: chocolate;
+    border: medium solid orange;
+    /* Propiedades de tipo shorthand*/
+    padding: 20px;
+    /* Propiedades de tipo shorthand*/
+    margin: 20px;
+    /* Esto aplica para margin y padding
+    1valor: Aplica a los 4 lados*/
+    padding: 40px;
+    margin: 40px;
+    /*2valores: Primer valor para los lados verticales
+    Segundo valor es para los lados horizontales*/
+    margin: 20px 40px;
+    padding: 20px 40px;
+    /*3valores: Primer valor para top
+    Segundo valor es para los lados horizontales
+    Tercer valor es para bottom*/
+    margin: 20px 40px 20px;
+    padding: 20px 40px 20px;
+    /*3valores: Primer valor para top
+    Segundo valor es para derecha
+    Tercer valor es para bottom
+    Cuarto valor es para izquierda*/
+    margin: 20px 40px 20px 40px;
+    padding: 20px 40px 20px 40px;
+    }</code></pre>
+    </p>
+    <a href="box-model.html#temario-box-model">👆</a>
+    <hr>
+  </section>
+  <section id="caja-linea-caja-bloque">
+    <h2>Caja de Línea vs Caja de Bloque</h2>
+    <p>59 - 86</p>
+    <span class="caja-linea">Esto es una caja de Línea</span>
+    <span>Esto es una span</span>
+    <div class="caja-bloque">Esto es una caja de Bloque</div>
+    <p>
+    <pre><code>/*****************************Cajas de Línea vs Cajas de Bloque********************************/
+    
+    /* Cajas de Línea
+    - Ocupan el espacio necesario para mostrar su contenido.
+    - No tienen dimensiones modificables (alto, ancho)
+    - Permiten otros elementos a su lado.
+    - Padding y Margin solo empujan a elementos adyacentes en el horizontal, NUNCA EN VERTICAL.
+    Cajas de Bloque
+    - Ocupan todo el ancho disponible, lo que genera saltos de línea.
+    - Tienen dimensiones modificables (alto, ancho)
+    - No permiten otros elementos a su lado (aunque especifique un anchi, siguen ocupando todo el espacio disponible a lo
+    ancho generando saltos de línea). */
+    
+    .caja-linea,
+    .caja-bloque {
+    background-color: orange;
+    width: 500px;
+    height: 300px;
+    padding: 16px;
+    border: medium solid black;
+    }
+    
+    .caja-linea {
+    margin: 48px;
+    }
+    
+    .caja-bloque {
+    margin: 32px;
+    }</code></pre>
+    </p>
+    <a href="box-model.html#temario-box-model">👆</a>
+    <hr>
+  </section>
+  <section id="propiedad-display">
+    <h2>Propiedad Display</h2>
+    <p>88 - 136</p>
+    <span class="caja-display-uno">Esto es una caja de Línea</span>
+    <span>Esto es una span</span>
+    <div class="caja-display-dos">Esto es una caja de Bloque</div>
+    <div class="caja-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quo blanditiis illum sequi
+      officiis doloremque cupiditate quia tenetur? Velit inventore fugit iusto, ipsum architecto quos odio fugiat cumque
+      nostrum aspernatur?</div>
+    <span class="caja-linea-bloque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum accusamus delectus,
+      soluta inventore, corrupti dignissimos nihil cum, adipisci ea exercitationem odit vel iure voluptatibus autem
+      suscipit quis libero laudantium neque!</span><span>Esto es una span</span>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste error velit nesciunt corporis cum quam neque sit
+      soluta, suscipit officiis deserunt quidem ex esse eligendi ipsum illo laborum dolore optio.</p>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ol>
+    <table>
+      <tr>
+        <td>Celda 1</td>
+        <td>Celda 2</td>
+        <td>Celda 3</td>
+      </tr>
+      <tr>
+        <td>Celda 4</td>
+        <td>Celda 5</td>
+        <td>Celda 6</td>
+      </tr>
+      <tr>
+        <td>Celda 7</td>
+        <td>Celda 8</td>
+        <td>Celda 9</td>
+      </tr>
+    </table>
+    <p>
+    <pre><code>/*************************************Propiedad Display****************************************/
+    
+    /* Propiedad Display
+    inline
+    block
+    inline-block - Se comporta como un elemento de línea pero acepta modificar sus dimensiones (alto, ancho)
+    none
+    table
+    list-item
+    flex - Ve mi curso de Flexbox
+    grid - Ve mi curso de Grid CSS
+    */
+    
+    .caja-display-uno,
+    .caja-display-dos {
+    background-color: orange;
+    width: 500px;
+    height: 300px;
+    padding: 16px;
+    border: medium solid black;
+    margin: 20px;
+    }
+    
+    .caja-display-uno {
+    display: block;
+    }
+    
+    .caja-display-dos {
+    display: inline;
+    }
+    
+    .caja-none,
+    .caja-linea-bloque {
+    background-color: darkolivegreen;
+    color: white;
+    padding: 0 16px;
+    margin: 20px 0;
+    width: 600px;
+    height: 300px;
+    border: medium solid black;
+    }
+    
+    .caja-linea-bloque {
+    display: inline-block;
+    }
+    
+    .caja-none {
+    display: none;
+    }</code></pre>
+    </p>
+    <a href="box-model.html#temario-box-model">👆</a>
+    <hr>
+  </section>
+  <section id="propiedad-visibility">
+    <h2>Propiedad Visibility</h2>
+    <p>138 - </p>
     <p>
     <pre><code></code></pre>
     </p>
     <a href="box-model.html#temario-box-model">👆</a>
     <hr>
   </section>
+  <section id="">
+    <h2></h2>
+    <p></p>
+    <p>
+    <pre><code></code></pre>
+    </p>
+    <a href="box-model.html#temario-box-model">👆</a>
+    <hr>
+  </section>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 
 </html>
