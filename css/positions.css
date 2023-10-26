@@ -129,3 +129,11 @@ Para que este comportamiento funcione el elemento sticky debe ser hijo directo d
   top: 0;
   right: 0;
 }
+
+/***************************************Z Index************************************************/
+
+/* z-index; Propiedad que permite controlar la profundidad de los elementos posicionados, su valor por defecto es auto, acepta números positivos, negativos y cero.
+
+A mayor valor el elemento esta más al frente, a menor valor más al fondo.
+
+Un elemento padre nunca podrá estar sobre sus elementos hijos, sin embargo los elementos hijos si pueden dándoles un valor negativo*/

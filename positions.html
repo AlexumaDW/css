@@ -21,6 +21,7 @@
       <li><a href="positions.html#absolute">Posicionamiento Absoluto</a></li>
       <li><a href="positions.html#fixed">Posicionamiento Fijo</a></li>
       <li><a href="positions.html#sticky">Posicionamiento Pegajoso</a></li>
+      <li><a href="positions.html#z-index">Z Index</a></li>
       <li><a href="positions.html#"></a></li>
     </ul>
     <hr>
@@ -180,10 +181,49 @@
   <div class="sticky" id="sticky">Caja Pegajosa</div>
   <section>
     <h2>Posicionamiento Pegajoso</h2>
-    <p>106 - </p>
+    <p>106 - 131</p>
     <section class="sticky-parent">
       <div class="sticky-child">Caja Pegajosa</div>
     </section>
+    <p>
+    <pre><code>/*******************************Posicionamiento Pegajoso***************************************/
+    
+    /* sticky: Es una combinación de posicionamiento relative y fixed, para este posicionamiento las propiedades de top,
+    left, bottom y right no mueven el elemento, sirven como un punto de referencia, mientras no lleguen a ese valor el
+    elemento se comporta como relative, cuando llega se convierte en fixed
+    
+    Para que este comportamiento funcione el elemento sticky debe ser hijo directo del body o su elemento contenedor debe
+    tener dimensiones definidas y sólo será sticky dentro de las dimensiones de su contenedor padre.*/
+    
+    .sticky {
+    background-color: lightskyblue;
+    position: sticky;
+    top: 0;
+    left: 0;
+    }
+    
+    .sticky-parent {
+    border: thin dashed black;
+    height: 600px;
+    }
+    
+    .sticky-child {
+    background-color: lightgreen;
+    position: sticky;
+    height: 100px;
+    width: 100px;
+    top: 0;
+    right: 0;
+    }</code></pre>
+    </p>
+    <a href="positions.html#temario-positions">👆</a>
+    <hr>
+  </section>
+  <section id="z-index">
+    <h2>Z Index</h2>
+    <p>133 - </p>
+    <div class="z-index-1">Probando z-index caja 1</div>
+    <div class="z-index-2">Probando z-index caja 2</div>
     <p>
     <pre><code></code></pre>
     </p>
