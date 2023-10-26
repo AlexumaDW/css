@@ -34,4 +34,7 @@ Estás 5 propiedades no funcionan con el valor static.*/
 
 .static {
   background-color: yellow;
+  position: static;
+  top: 10px;
+  left: 10px;
 }
