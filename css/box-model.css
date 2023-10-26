@@ -257,3 +257,13 @@ html {
 }
 
 /**************************************Centrado de Cajas************************************/
+
+.sitio-web {
+  border: thin solid black;
+  background-color: thistle;
+  width: 800px;
+  height: 1000px;
+  padding: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
