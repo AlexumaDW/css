@@ -22,7 +22,6 @@
       <li><a href="positions.html#fixed">Posicionamiento Fijo</a></li>
       <li><a href="positions.html#sticky">Posicionamiento Pegajoso</a></li>
       <li><a href="positions.html#z-index">Z Index</a></li>
-      <li><a href="positions.html#"></a></li>
     </ul>
     <hr>
   </section>
@@ -221,23 +220,54 @@
   </section>
   <section id="z-index">
     <h2>Z Index</h2>
-    <p>133 - </p>
+    <p>133 - 171</p>
     <div class="z-index-1">Probando z-index caja 1</div>
     <div class="z-index-2">Probando z-index caja 2</div>
     <section class="z-index-parent">
       <div class="z-index-child">Hijo z-index</div>
     </section>
     <p>
-    <pre><code></code></pre>
-    </p>
-    <a href="positions.html#temario-positions">👆</a>
-    <hr>
-  </section>
-  <section id="">
-    <h2></h2>
-    <p> - </p>
-    <p>
-    <pre><code></code></pre>
+    <pre><code>/***************************************Z Index************************************************/
+    
+    /* z-index; Propiedad que permite controlar la profundidad de los elementos posicionados, su valor por defecto es auto,
+    acepta números positivos, negativos y cero.
+    
+    A mayor valor el elemento esta más al frente, a menor valor más al fondo.
+    
+    Un elemento padre nunca podrá estar sobre sus elementos hijos, sin embargo los elementos hijos si pueden dándoles un
+    valor negativo y que el elemento padre no tenga definido z-index*/
+    
+    .z-index-1,
+    .z-index-2 {
+    background-color: mediumaquamarine;
+    border: thin solid black;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    }
+    
+    .z-index-2 {
+    top: -200px;
+    left: 100px;
+    z-index: 2;
+    }
+    
+    .z-index-parent {
+    background-color: mediumorchid;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    }
+    
+    .z-index-child {
+    background-color: mediumvioletred;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    top: -75px;
+    left: 75px;
+    z-index: -3;
+    }</code></pre>
     </p>
     <a href="positions.html#temario-positions">👆</a>
     <hr>
