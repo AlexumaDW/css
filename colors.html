@@ -15,19 +15,151 @@
     <h2>Temario de Colores:</h2>
     <ul>
       <li><a href="index.html#temario">Volver al Temario Principal</a></li>
-      <li><a href="colors.html#"></a></li>
+      <li><a href="colors.html#color-by-name">Color por Nombre</a></li>
+      <li><a href="colors.html#color-rgb">Colores RGB</a></li>
+      <li><a href="colors.html#color-hsl">Colores HSL</a></li>
     </ul>
     <hr>
   </section>
-  <section id="">
-    <h2></h2>
-    <p>1</p>
+  <section id="color-by-name">
+    <h2>Color por Nombre</h2>
+    <div class="color-by-name">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam pariatur doloremque iure illo, ad dolore porro
+        quia minus magni. Sunt iure explicabo nostrum eum mollitia reiciendis vero recusandae quidem tempore?</p>
+    </div>
+    <p>1 - 7</p>
     <p>
-    <pre><code></code></pre>
+    <pre><code>/******************************Colores Por Nombre**********************************************/
+    
+    .color-by-name {
+    background-color: aqua;
+    color: rebeccapurple;
+    border: thick solid greenyellow;
+    }
+</code></pre>
     </p>
     <a href="colors.html#temario-colores">👆</a>
     <hr>
   </section>
+  <section id="color-hex">
+    <h2>Colores Hexadecimales</h2>
+    <p>9 - 38</p>
+    <div class="color-hex">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam pariatur doloremque iure illo, ad dolore porro
+        quia minus magni. Sunt iure explicabo nostrum eum mollitia reiciendis vero recusandae quidem tempore?</p>
+    </div>
+    <p>
+    <pre><code>/******************************Colores Hexadecimal*********************************************/
+    
+    /* Sistema Hexadecimal
+    0123456789ABCDEF
+    
+    RedGreenBlue (Medios Digitales) CyanMagentaYellowKey (Medios Impresos)
+    
+    Colores en HEX van a ser colores de 6 dígitos
+    #FF6600
+    */
+    
+    .color-hex {
+    background-color: #ff6600;
+    /* para simplificar los 3 canales deben ser pares iguales */
+    background-color: #f60;
+    color: #8800ff;
+    border: thick solid #adff2f;
+    color: #ffffff;
+    color: #fff;
+    color: #ff0000;
+    color: #f00;
+    color: #00ff00;
+    color: #0f0;
+    color: #0000ff;
+    color: #00f;
+    color: #000000;
+    color: #000;
+    background-color: #00000050;
+    background-color: #0005;
+    }</code></pre>
+    </p>
+    <a href="colors.html#temario-colores">👆</a>
+    <hr>
+  </section>
+  <section id="color-rgb">
+    <h2>Colores RGB</h2>
+    <p>40 - 56</p>
+    <div class="color-rgb">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam pariatur doloremque iure illo, ad dolore porro
+        quia minus magni. Sunt iure explicabo nostrum eum mollitia reiciendis vero recusandae quidem tempore?</p>
+    </div>
+    <p>
+    <pre><code>/**************************************Colores RGB*********************************************/
+    
+    /* Sistema RGB
+    Acepta 8 bits por canal
+    Bit(0/1) 2 elevado a la potencia 8 = 2*2*2*2*2*2*2*2 = 256
+    Por cada canal de color tenemos valores que van del 0 - 255 */
+    
+    .color-rgb {
+    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
+    background-color: rgb(0, 255, 0);
+    background-color: rgb(0, 0, 255);
+    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0, .5);
+    color: rgb(255, 102, 0);
+    border: thick solid rgb(128, 7, 9);
+    }</code></pre>
+    </p>
+    <a href="colors.html#temario-colores">👆</a>
+    <hr>
+  </section>
+  <section id="color-hsl">
+    <h2>Colores HSL</h2>
+    <p>58 - 91</p>
+    <div class="color-hsl">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam pariatur doloremque iure illo, ad dolore porro
+        quia minus magni. Sunt iure explicabo nostrum eum mollitia reiciendis vero recusandae quidem tempore?</p>
+    </div>
+    <img src="./assets/circulo-cromatico.webp" alt="círculo crómatico">
+    <p>
+    <pre><code>/**************************************Colores HSL*********************************************/
+    
+    /* HueSaturationLightness (Tono - Saturación - Luminosidad)
+    El primer valor Hue(Círculo Cromático)
+    0° -> red
+    60° -> yellow
+    120° -> green
+    180° -> cyan
+    240° -> blue
+    300° -> magenta
+    
+    El segundo valor es Saturation(Intensidad del Color)
+    0% -> Escala de grises
+    100% -> Color puro
+    
+    El tercer valor es Lightness (Luminosidad del Color
+    0% -> Negro
+    50% -> Color Puro
+    100% -> Blanco
+    */
+    
+    .color-hsl {
+    background-color: hsl(0, 100%, 50%);
+    background-color: hsl(0, 50%, 50%);
+    background-color: hsl(0, 100%, 0%);
+    background-color: hsl(0, 100%, 100%);
+    background-color: hsl(120, 100%, 50%);
+    background-color: hsl(30, 100%, 50%);
+    background-color: hsl(210, 100%, 50%);
+    background-color: hsla(210, 100%, 50%, .5);
+    background-color: hsla(210, 100%, 0%, .5);
+    color: rebeccapurple;
+    border: thick solid greenyellow;
+    }</code></pre>
+    </p>
+    <a href="colors.html#temario-colores">👆</a>
+    <hr>
+  </section>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 
 </html>
