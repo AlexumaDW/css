@@ -36,7 +36,7 @@ html {
   border: 5px solid rebeccapurple;
 }
 
-/*******************************************Em´s***********************************************/
+/*******************************************Em's***********************************************/
 
 .ems {
   background-color: goldenrod;
@@ -48,5 +48,24 @@ html {
 .em-child {
   background-color: tomato;
   border: thick solid khaki;
+  margin: .5em;
+  padding: 1em;
   font-size: 2em;
+}
+
+/******************************************Rem's***********************************************/
+
+.rems {
+  background-color: goldenrod;
+  font-size: 24px;
+  padding: 1rem .5rem;
+  border: thick solid aquamarine;
+}
+
+.rem-child {
+  background-color: tomato;
+  border: thick solid khaki;
+  margin: .5rem;
+  padding: 1rem;
+  font-size: 2rem;
 }
