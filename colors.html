@@ -19,6 +19,7 @@
       <li><a href="colors.html#color-rgb">Colores RGB</a></li>
       <li><a href="colors.html#color-hsl">Colores HSL</a></li>
       <li><a href="colors.html#color-transparent-current">Valores transparent & currentColor</a></li>
+      <li><a href="colors.html#opacity">Propiedad Opacity</a></li>
     </ul>
     <hr>
   </section>
@@ -162,7 +163,7 @@
   </section>
   <section id="color-transparent-current">
     <h2>Valores transparent & currentColor</h2>
-    <p>93 - </p>
+    <p>93 - 104</p>
     <section style="color: blueviolet;">
       <div class="color-transparent-current">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam pariatur doloremque iure illo, ad dolore
@@ -171,7 +172,41 @@
       </div>
     </section>
     <p>
-    <pre><code></code></pre>
+    <pre><code>/**********************Valores transparent & currentColor**************************************/
+    
+    /* Valor transparent: Color transparente es igual a aplicar rgba(0,0,0,0)
+    Valor currentColor: Hereda el valor por defecto o asignado de la propiedad color, del ancestro que tenga definida esta
+    propiedad, busca del ancestro más cercano al más alejado*/
+    
+    .color-transparent-current {
+    background-color: darkmagenta;
+    background-color: currentColor;
+    background-color: transparent;
+    border: thick solid currentColor;
+    /* color: white; */
+    }</code></pre>
+    </p>
+    <a href="colors.html#temario-colores">👆</a>
+    <hr>
+  </section>
+  <section id="opacity">
+    <h2>Propiedad Opacity</h2>
+    <p>106 - 115</p>
+    <div class="opacity">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam pariatur doloremque iure illo, ad dolore porro
+        quia minus magni. Sunt iure explicabo nostrum eum mollitia reiciendis vero recusandae quidem tempore?</p>
+    </div>
+    <p>
+    <pre><code>/***************************************Propiedad Opacity**************************************/
+    
+    .opacity {
+    background-color: orchid;
+    color: navy;
+    border: medium solid orangered;
+    opacity: .5;
+    opacity: 1;
+    opacity: 0;
+    }</code></pre>
     </p>
     <a href="colors.html#temario-colores">👆</a>
     <hr>

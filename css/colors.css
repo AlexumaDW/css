@@ -102,3 +102,14 @@ El tercer valor es Lightness (Luminosidad del Color
   border: thick solid currentColor;
   /* color: white; */
 }
+
+/***************************************Propiedad Opacity**************************************/
+
+.opacity {
+  background-color: orchid;
+  color: navy;
+  border: medium solid orangered;
+  opacity: .5;
+  opacity: 1;
+  opacity: 0;
+}
