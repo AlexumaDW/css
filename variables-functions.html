@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variables y Funciones en CSS</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/variables-functions.css">
+</head>
+
+<body>
+  <section id="temario-variables-funciones">
+    <h1>Variables y Funciones en CSS</h1>
+    <h2>Temario Variables y Funciones:</h2>
+    <ul>
+      <li><a href="index.html#temario">Volver al Temario Principal</a></li>
+      <li><a href="variables-functions.html#custom-props">Custom Properties (Variables CSS)</a></li>
+    </ul>
+    <hr>
+  </section>
+  <section id="custom-props">
+    <p>1 - 36</p>
+    <h2 class="title-props">Custom Properties (Variables CSS)</h2>
+    <article class="custom-props-1">
+      <section class="custom-props-2" style="--border-color:red;">
+        <div class="custom-props-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor id distinctio velit
+          ab
+          unde quas excepturi molestias. Dicta, aspernatur eum expedita quaerat sunt fugit aliquid, quas quo voluptates,
+          quod asperiores!</div>
+      </section>
+    </article>
+    <p>
+    <pre><code>/******************************Custom Properties (Variables CSS)*******************************/
+    
+    :root {
+    color: darkgreen;
+    --default-bg-color: skyblue;
+    }
+    
+    html {
+    color: red;
+    }
+    
+    .custom-props-1 {
+    --primary-color: gray;
+    --font-size: 32px;
+    }
+    
+    .custom-props-1 {
+    color: var(--primary-color);
+    }
+    
+    .custom-props-2 {
+    background-color: var(--default-bg-color);
+    border: thin solid var(--border-color);
+    padding: 1rem;
+    }
+    
+    .custom-props-3 {
+    font-size: var(--font-size);
+    border: thin solid var(--border-color);
+    }
+    
+    .title-props {
+    --primary-color: navy;
+    color: var(--primary-color, orange);
+    background-color: var(--default-bg-color);
+    }</code></pre>
+    </p>
+    <a href="variables-functions.html#temario-variables-funciones">👆</a>
+    <hr>
+  </section>
+  <section id="custom-props">
+    <p>1 - 36</p>
+    <h2 class="title-props">Custom Properties (Variables CSS)</h2>
+    <article class="custom-props-1">
+      <section class="custom-props-2" style="--border-color:red;">
+        <div class="custom-props-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor id distinctio velit
+          ab
+          unde quas excepturi molestias. Dicta, aspernatur eum expedita quaerat sunt fugit aliquid, quas quo voluptates,
+          quod asperiores!</div>
+      </section>
+    </article>
+    <p>
+    <pre><code>/******************************Custom Properties (Variables CSS)*******************************/
+    
+    :root {
+    color: darkgreen;
+    --default-bg-color: skyblue;
+    }
+    
+    html {
+    color: red;
+    }
+    
+    .custom-props-1 {
+    --primary-color: gray;
+    --font-size: 32px;
+    }
+    
+    .custom-props-1 {
+    color: var(--primary-color);
+    }
+    
+    .custom-props-2 {
+    background-color: var(--default-bg-color);
+    border: thin solid var(--border-color);
+    padding: 1rem;
+    }
+    
+    .custom-props-3 {
+    font-size: var(--font-size);
+    border: thin solid var(--border-color);
+    }
+    
+    .title-props {
+    --primary-color: navy;
+    color: var(--primary-color, orange);
+    background-color: var(--default-bg-color);
+    }</code></pre>
+    </p>
+    <a href="variables-functions.html#temario-variables-funciones">👆</a>
+    <hr>
+  </section>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
