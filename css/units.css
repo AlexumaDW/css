@@ -93,3 +93,35 @@ html {
   background-color: goldenrod;
   width: 10ch;
 }
+
+/***************************************Porcentages********************************************/
+
+.percentages {
+  background-color: goldenrod;
+  width: 80%;
+  font-size: 100%;
+  /* La altura en % no se puede controlar, porque la altura la controla el contenido */
+  height: 100%;
+}
+
+.height-parent {
+  background-color: brown;
+  width: 500px;
+  height: 500px;
+}
+
+.height-child {
+  background-color: coral;
+  width: 50%;
+  height: 50%;
+}
+
+/*********************************Unidades de Viewport*****************************************/
+
+.percentages {
+  background-color: goldenrod;
+  width: 80%;
+  font-size: 100%;
+  /* La altura en % no se puede controlar, porque la altura la controla el contenido */
+  height: 100%;
+}
