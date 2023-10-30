@@ -118,10 +118,22 @@ html {
 
 /*********************************Unidades de Viewport*****************************************/
 
-.percentages {
-  background-color: goldenrod;
-  width: 80%;
-  font-size: 100%;
-  /* La altura en % no se puede controlar, porque la altura la controla el contenido */
-  height: 100%;
+.viewport {
+  background-color: darkcyan;
+  width: 50vw;
+  /* Recuerda que el navegador tiene barra de desplazamiento que forma parte del viewport */
+  /* width: 100vw; */
+  /* width: 100%; */
+  height: 50vh;
+  height: 100vh;
+  font-size: 3vw;
+  padding: 2vh 2vw;
+}
+
+.caja-vmin,
+.caja-vmax {
+  background-color: salmon;
+  border: thick solid black;
+  width: 50vmax;
+  height: 50vmin;
 }
