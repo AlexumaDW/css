@@ -16,11 +16,12 @@
     <ul>
       <li><a href="index.html#temario">Volver al Temario Principal</a></li>
       <li><a href="variables-functions.html#custom-props">Custom Properties (Variables CSS)</a></li>
+      <li><a href="variables-functions.html#functions-css">Funciones en CSS</a></li>
     </ul>
     <hr>
   </section>
   <section id="custom-props">
-    <p>1 - 36</p>
+    <p>1 - 43</p>
     <h2 class="title-props">Custom Properties (Variables CSS)</h2>
     <article class="custom-props-1">
       <section class="custom-props-2" style="--border-color:red;">
@@ -40,6 +41,13 @@
     
     html {
     color: red;
+    box-sizing: border-box;
+    }
+    
+    *,
+    *::after,
+    *::before {
+    box-sizing: inherit;
     }
     
     .custom-props-1 {
@@ -71,53 +79,39 @@
     <a href="variables-functions.html#temario-variables-funciones">👆</a>
     <hr>
   </section>
-  <section id="custom-props">
-    <p>1 - 36</p>
-    <h2 class="title-props">Custom Properties (Variables CSS)</h2>
-    <article class="custom-props-1">
-      <section class="custom-props-2" style="--border-color:red;">
-        <div class="custom-props-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor id distinctio velit
-          ab
-          unde quas excepturi molestias. Dicta, aspernatur eum expedita quaerat sunt fugit aliquid, quas quo voluptates,
-          quod asperiores!</div>
-      </section>
-    </article>
+  <section id="functions-css">
+    <p>45 - 65</p>
+    <h2 class="title-props">Funciones en CSS</h2>
+    <ul>
+      <li>var()</li>
+      <li>url()</li>
+      <li>calc()</li>
+      <li>min() & max()</li>
+      <li>clamp()</li>
+    </ul>
+    <div class="ch-10">0123456789</div>
+    <div class="min-max">Funciones min() & max()</div>
     <p>
-    <pre><code>/******************************Custom Properties (Variables CSS)*******************************/
+    <pre><code>/**************************************Funciones en CSS****************************************/
     
-    :root {
-    color: darkgreen;
-    --default-bg-color: skyblue;
-    }
-    
-    html {
-    color: red;
-    }
-    
-    .custom-props-1 {
-    --primary-color: gray;
-    --font-size: 32px;
-    }
-    
-    .custom-props-1 {
-    color: var(--primary-color);
-    }
-    
-    .custom-props-2 {
+    .ch-10 {
+    --padding-size: 2ch;
+    --num-ch: 10ch;
     background-color: var(--default-bg-color);
-    border: thin solid var(--border-color);
-    padding: 1rem;
+    font-size: 2rem;
+    padding: var(--padding-size);
+    width: calc(var(--num-ch) + var(--padding-size)*2);
     }
     
-    .custom-props-3 {
-    font-size: var(--font-size);
-    border: thin solid var(--border-color);
-    }
-    
-    .title-props {
-    --primary-color: navy;
-    color: var(--primary-color, orange);
+    .min-max {
     background-color: var(--default-bg-color);
+    margin-top: 1rem;
+    width: min(300px, 20vw);
+    height: max(400px, 25vh);
+    }
+    
+    h1 {
+    font-size: clamp(2rem, 1rem + 3vw, 3rem);
     }</code></pre>
     </p>
     <a href="variables-functions.html#temario-variables-funciones">👆</a>
