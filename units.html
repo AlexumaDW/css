@@ -200,14 +200,34 @@
   </section>
   <section id="viewport">
     <h2>Unidades de Viewport</h2>
-    <p>119 - </p>
+    <p>119 - 139</p>
     <div class="viewport">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet repellendus unde quo
       consectetur adipisci deleniti, neque, quisquam dolorem alias ipsam ipsa. Earum consequatur facere quibusdam id ab
       sint eum necessitatibus.m</div>
     <div class="caja-vmax">Caja VMAX</div>
     <div class="caja-vmin">Caja VMIN</div>
     <p>
-    <pre><code></code></pre>
+    <pre><code>/*********************************Unidades de Viewport*****************************************/
+    
+    .viewport {
+    background-color: darkcyan;
+    width: 50vw;
+    /* Recuerda que el navegador tiene barra de desplazamiento que forma parte del viewport */
+    /* width: 100vw; */
+    /* width: 100%; */
+    height: 50vh;
+    height: 100vh;
+    font-size: 3vw;
+    padding: 2vh 2vw;
+    }
+    
+    .caja-vmin,
+    .caja-vmax {
+    background-color: salmon;
+    border: thick solid black;
+    width: 50vmax;
+    height: 50vmin;
+    }</code></pre>
     </p>
     <a href="units.html#temario-unidades-medida">👆</a>
     <hr>
