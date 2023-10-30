@@ -46,4 +46,16 @@ html {
   border-radius: 50%;
 }
 
-/**********************************************************************************************/
+/****************************************Outlines**********************************************/
+
+.outline {
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  outline-width: 5px;
+  outline-style: dashed;
+  outline-color: green;
+  outline: thick dashed green;
+  outline-offset: 3rem;
+  outline-offset: -1rem;
+}
