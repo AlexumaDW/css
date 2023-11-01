@@ -23,7 +23,7 @@ img {
   margin-right: auto;
 }
 
-/*****************************************Sombras**********************************************/
+/****************************************Sombras en Cajas**************************************/
 
 .box-shadow {
   /* box-shadow: mov-x mov-y radius-blur spread-blur color inset/outset; */
@@ -31,4 +31,13 @@ img {
   box-shadow: -1rem -1rem 1rem 1rem #00000050;
   box-shadow: -1rem -1rem 1rem 1rem #F00 inset;
   box-shadow: 1rem 1rem 1rem 1rem #F00;
+}
+
+/*****************************************Sombras en Textos************************************/
+
+.text-shadow {
+  text-align: center;
+  font-size: 3rem;
+  /* text-shadow: mov-x mov-y radius-blur color; */
+  text-shadow: -1rem -1rem .5rem palevioletred;
 }
