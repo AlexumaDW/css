@@ -275,4 +275,23 @@ img {
 
 /**********************************Modos de Mezcla a Fondos************************************/
 
-.background-blend-modes {}
+.background-blend-modes {
+  background-image: url(../assets/puesta-sol.jpg), url(../assets/BuenosDias.jpg);
+  background-size: cover;
+  /* background-blend-mode: normal;
+  background-blend-mode: color;
+  background-blend-mode: color-dodge;
+  background-blend-mode: color-burn;
+  background-blend-mode: screen;
+  background-blend-mode: multiply;
+  background-blend-mode: saturation;
+  background-blend-mode: luminosity;
+  background-blend-mode: hue;
+  background-blend-mode: exclusion;
+  background-blend-mode: difference;
+  background-blend-mode: hard-light;
+  background-blend-mode: soft-light;
+  background-blend-mode: lighten;
+  background-blend-mode: overlay; */
+  background-blend-mode: darken;
+}
