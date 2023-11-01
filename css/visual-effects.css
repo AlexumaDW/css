@@ -246,7 +246,7 @@ img {
   filter: invert(1);
 }
 
-/**************************************Modos de mezcla*****************************************/
+/********************************Modos de Mezcla a Imagenes************************************/
 
 .absolute {
   position: absolute;
@@ -272,3 +272,7 @@ img {
   mix-blend-mode: overlay; */
   mix-blend-mode: darken;
 }
+
+/**********************************Modos de Mezcla a Fondos************************************/
+
+.background-blend-modes {}
