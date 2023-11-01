@@ -14,3 +14,25 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/******************************Imágenes con Tamaños Específicos********************************/
+
+.card {
+  border: medium solid black;
+  width: 400px;
+  height: 400px;
+}
+
+.card img {
+  height: 300px;
+  object-fit: contain;
+  /* default */
+  object-fit: fill;
+  object-fit: cover;
+  object-position: 0 50%;
+  object-position: 50% 50%;
+  object-fit: none;
+  /* Toma el valor que sea menor de los valores contain y none */
+  object-fit: scale-down;
+  object-position: 50% 50%;
+}
