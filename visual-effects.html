@@ -17,6 +17,7 @@
       <li><a href="index.html#temario">Volver al Temario Principal</a></li>
       <li><a href="visual-effects.html#shadows">Sombras en Cajas</a></li>
       <li><a href="visual-effects.html#text-shadows">Sombras en Textos</a></li>
+      <li><a href="visual-effects.html#multiple-shadows">Sombras Multiples</a></li>
     </ul>
     <hr>
   </section>
@@ -57,20 +58,21 @@
     <a href="visual-effects.html#temario-efectos-visuales">👆</a>
     <hr>
   </section>
-  <section id="text-shadows">
-    <h2>Sombras en Textos</h2>
-    <div class="box text-shadow">
+  <section id="multiple-shadows">
+    <h2>Sombras Multiples</h2>
+    <div class="box multiple-shadows">
       <p>Sombras</p>
     </div>
-    <p>36 - 43</p>
+    <p>45 - 53</p>
     <p>
-    <pre><code>/*****************************************Sombras en Textos************************************/
+    <pre><code>/*****************************************Sombras Multiples************************************/
     
-    .text-shadow {
+    .multiple-shadows {
     text-align: center;
     font-size: 3rem;
     /* text-shadow: mov-x mov-y radius-blur color; */
-    text-shadow: -1rem -1rem .5rem palevioletred;
+    text-shadow: -1rem -1rem .5rem palevioletred, 1rem 1rem .5rem black;
+    box-shadow: -1rem -1rem 1rem 1rem #F00 inset, 1rem 1rem 1rem 1rem #F00;
     }</code></pre>
     </p>
     <a href="visual-effects.html#temario-efectos-visuales">👆</a>
