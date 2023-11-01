@@ -28,6 +28,7 @@
       <li><a href="visual-effects.html#multiple-filter">Filtros Multiples</a></li>
       <li><a href="visual-effects.html#backdrop-filter">Filtros a Fondos</a></li>
       <li><a href="visual-effects.html#backdrop-filter-multiple">Filtros Múltiples a Fondos</a></li>
+      <li><a href="visual-effects.html#dark-mode">Modo Dark/Light con Filtros</a></li>
     </ul>
     <hr>
   </section>
@@ -369,6 +370,26 @@
     color: white;
     background-color: rgba(255, 100, 255, .5);
     backdrop-filter: blur(1rem) hue-rotate(240deg) opacity(.7) invert(1);
+    }</code></pre>
+    </p>
+    <a href="visual-effects.html#temario-efectos-visuales">👆</a>
+    <hr>
+  </section>
+  <section id="dark-mode">
+    <h2>Modo Dark/Light con Filtros</h2>
+    <p>237 - 247</p>
+    <img src="./assets/puesta-sol.jpg" alt="Puesta de Sol">
+    <p>Agragar class:dark-mode a el html</p>
+    <pre><code>/**************************************Modo Obscuro********************************************/
+    
+    .dark-mode {
+    background-color: white;
+    color: black;
+    filter: invert(1);
+    }
+    
+    .dark-mode img {
+    filter: invert(1);
     }</code></pre>
     </p>
     <a href="visual-effects.html#temario-efectos-visuales">👆</a>

@@ -233,3 +233,15 @@ img {
   background-color: rgba(255, 100, 255, .5);
   backdrop-filter: blur(1rem) hue-rotate(240deg) opacity(.7) invert(1);
 }
+
+/**************************************Modo Obscuro********************************************/
+
+.dark-mode {
+  background-color: white;
+  color: black;
+  filter: invert(1);
+}
+
+.dark-mode img {
+  filter: invert(1);
+}
