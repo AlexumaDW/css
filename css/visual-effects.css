@@ -187,7 +187,7 @@ img {
 
 /**********************************Filtros Multiples*******************************************/
 
-.filters-multiple {
+.filter-multiple {
   filter: blur(.1rem) hue-rotate(270deg) opacity(.7) invert(1);
 }
 
@@ -197,7 +197,8 @@ img {
   position: relative;
 }
 
-.backdrop-filter {
+.backdrop-filter,
+.backdrop-filter-multiple {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -220,4 +221,15 @@ img {
   backdrop-filter: opacity(.25);
   backdrop-filter: hue-rotate(180deg); */
   backdrop-filter: blur(.5rem);
+}
+
+/*******************************Filtros Múltiples a Fondos*************************************/
+
+.backdrop-filter-multiple h4 {
+  border-radius: 1rem;
+  padding: 2rem;
+  font-size: 3rem;
+  color: white;
+  background-color: rgba(255, 100, 255, .5);
+  backdrop-filter: blur(1rem) hue-rotate(240deg) opacity(.7) invert(1);
 }
