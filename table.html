@@ -15,15 +15,61 @@
     <h2>Temario de Tablas en CSS:</h2>
     <ul>
       <li><a href="index.html#temario">Volver al Temario Principal</a></li>
-      <li><a href="table.html#"></a></li>
+      <li><a href="table.html#table">Tablas</a></li>
     </ul>
     <hr>
   </section>
-  <section id="">
-    <h2></h2>
-    <p>16 - 25</p>
+  <section id="table">
+    <h2>Tablas</h2>
+    <p>16 - 40</p>
+    <table class="table">
+      <tr>
+        <th>A</th>
+        <th>B</th>
+        <th>C</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td></td>
+        <td>9</td>
+      </tr>
+    </table>
     <p>
-    <pre><code></code></pre>
+    <pre><code>.table {
+    font-size: 3rem;
+    border-collapse: collapse;
+    /* default */
+    border-collapse: separate;
+    /* Debe estar el border-collapse separate activo */
+    border-spacing: 1rem;
+    /* Debe estar el border-collapse separate activo */
+    /* default */
+    empty-cells: show;
+    empty-cells: hide;
+    text-align: center;
+    padding: 1rem;
+    }
+    
+    .table th,
+    .table td {
+    padding: .2rem;
+    }
+    
+    table,
+    th,
+    td {
+    border: medium solid black;
+    }</code></pre>
     </p>
     <a href="table.html#temario-tablas">👆</a>
     <hr>

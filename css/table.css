@@ -12,3 +12,29 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.table {
+  font-size: 3rem;
+  border-collapse: collapse;
+  /* default */
+  border-collapse: separate;
+  /* Debe estar el border-collapse separate activo */
+  border-spacing: 1rem;
+  /* Debe estar el border-collapse separate activo */
+  /* default */
+  empty-cells: show;
+  empty-cells: hide;
+  text-align: center;
+  padding: 1rem;
+}
+
+.table th,
+.table td {
+  padding: .2rem;
+}
+
+table,
+th,
+td {
+  border: medium solid black;
+}
