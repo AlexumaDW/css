@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularios en CSS</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/forms.css">
+</head>
+
+<body>
+  <section id="temario-formulario">
+    <h1>Formularios en CSS</h1>
+    <h2>Temario de Formulario en CSS:</h2>
+    <ul>
+      <li><a href="index.html#temario">Volver al Temario Principal</a></li>
+      <li><a href="forms.html#contact-form">Formulario de Contacto</a></li>
+    </ul>
+    <hr>
+  </section>
+  <section id="contact-form">
+    <h2>Formulario de Contacto</h2>
+    <p>16 - </p>
+    <form class="contact-form" action="https://formsubmit.co/alexumadw@gmail.com" method="POST" target="_blank">
+      <input type="text" name="usuario" id="usuario" placeholder="Escribe tu Nombre"
+        pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="Sólo acepta letras y espacios en blanco" required>
+      <input type="email" id="email" name="email" placeholder="Escribe tu Email"
+        pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$" title="Formato de correo Inválido" required>
+      <textarea name="comentarios" cols="50" rows="10" placeholder="Deja tu comentario aqui"></textarea>
+      <input class="btn" type="submit">
+      <input class="btn" type="reset">
+    </form>
+    <p>
+    <pre><code>/*************************************Formulario de Contacto***********************************/
+    
+    .contact-form {
+    --form-text-color: #666;
+    --form-success-color: #4caf50;
+    --form-error-color: #f44336;
+    --form-bg-color: #eee;
+    --form-border-color: #222;
+    --form-placeholder-color: #006999;
+    
+    background-color: var(--form-bg-color);
+    border: thin solid var(--form-border-color);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    }
+    
+    .contact-form>* {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    color: var(--form-text-color);
+    caret-color: var(--form-placeholder-color);
+    }
+    
+    .contact-form>*::placeholder {
+    color: var(--form-placeholder-color);
+    }
+    
+    .contact-form>*[required]:invalid {
+    border: thin solid var(--form-error-color);
+    }
+    
+    .contact-form>*[required]:valid {
+    border: thin solid var(--form-success-color);
+    }
+    
+    .contact-form .btn {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--form-placeholder-color);
+    color: white;
+    font-size: 1.2rem;
+    display: inline;
+    }
+    
+    .contact-form .btn:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    }
+    
+    .contact-form input[type="reset"] {
+    margin-bottom: 0;
+    }
+    
+    .contact-form textarea {
+    resize: none;
+    }</code></pre>
+    </p>
+    <a href="forms.html#temario-formulario">👆</a>
+    <hr>
+  </section>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br>
+</body>
+
+</html>
