@@ -141,3 +141,52 @@ img {
   background-image: radial-gradient(white 40%, black 40% 42%, transparent 42%), conic-gradient(cyan 0 50%, magenta 50% 80%, yellow 80%);
   border-radius: 50%;
 }
+
+/****************************************Filtros***********************************************/
+
+.card {
+  border: thick solid black;
+  width: 600px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card img {
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+}
+
+.filter {
+  /* filter: blur(.1rem);
+  filter: blur(1rem);
+  filter: brightness(.1);
+  filter: brightness(1);
+  filter: brightness(2);
+  filter: contrast(.1);
+  filter: contrast(1);
+  filter: grayscale(.1);
+  filter: grayscale(1);
+  filter: sepia(.1);
+  filter: sepia(1);
+  filter: hue-rotate(0deg);
+  filter: hue-rotate(60deg);
+  filter: hue-rotate(120deg);
+  filter: hue-rotate(180deg);
+  filter: hue-rotate(240deg);
+  filter: hue-rotate(300deg); */
+  /* booleano lo tiene o no */
+  /* filter: opacity(.1);
+  filter: opacity(1);
+  filter: saturate(.1);
+  filter: saturate(1);
+  filter: saturate(2); */
+  filter: invert(1);
+}
+
+/**********************************Filtros Multiples*******************************************/
+
+.filters-multiple {
+  filter: blur(.1rem) hue-rotate(270deg) opacity(.7) invert(1);
+}
