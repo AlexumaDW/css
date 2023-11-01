@@ -15,15 +15,203 @@
     <h2>Temario de Fondos en CSS:</h2>
     <ul>
       <li><a href="index.html#temario">Volver al Temario Principal</a></li>
-      <li><a href="backgrounds.html#"></a></li>
+      <li><a href="backgrounds.html#bg-color">Background Color</a></li>
+      <li><a href="backgrounds.html#bg-image">Background Image</a></li>
+      <li><a href="backgrounds.html#bg-size">Background Size</a></li>
+      <li><a href="backgrounds.html#bg-repeat">Background Repeat</a></li>
+      <li><a href="backgrounds.html#bg-position">Background Position</a></li>
+      <li><a href="backgrounds.html#bg-clip">Background Clip</a></li>
+      <li><a href="backgrounds.html#bg-origin">Background Origin</a></li>
+      <li><a href="backgrounds.html#bg-attachment">Background Attachment</a></li>
+      <li><a href="backgrounds.html#bg-art">Background Art</a></li>
+      <li><a href="backgrounds.html#bg-multiple">Background Multiple</a></li>
     </ul>
     <hr>
   </section>
-  <section id="">
-    <h2></h2>
-    <p>11 - </p>
+  <section id="bg-color">
+    <h2>Background Color</h2>
+    <p>20 - 23</p>
+    <div class="box bg-color"></div>
     <p>
-    <pre><code></code></pre>
+    <pre><code>/* background-color: define el color de fondo del elemento*/
+    .bg-color {
+    background-color: black;
+    }</code></pre>
+    </p>
+    <a href="backgrounds.html#fondos-temario">👆</a>
+    <hr>
+  </section>
+  <section id="bg-image">
+    <h2>Background Image</h2>
+    <p>25 - 28</p>
+    <div class="box bg-image"></div>
+    <p>
+    <pre><code>/* background-image: defina la imagen de fondo del elemento*/
+    .bg-image {
+    background-image: url(../assets/puesta-sol.jpg);
+    }</code></pre>
+    </p>
+    <a href="backgrounds.html#fondos-temario">👆</a>
+    <hr>
+  </section>
+  <section id="bg-size">
+    <h2>Background Size</h2>
+    <p>30 - 41</p>
+    <div class="box bg-size"></div>
+    <p>
+    <pre><code>/* background-size: define el tamaño de la imagen de fondo,
+    primer valor x, segundo y
+    -cover: cambia el tamaño de la imagen de fondo para asegurarse de que permanezca completamente visible
+    -contain: cambia el tamaño de la imagen de fondo para asegurarse de que el elemento esté completamente cubierto */
+    .bg-size {
+    background-image: url(../assets/puesta-sol.jpg);
+    background-size: 300px 200px;
+    /* con 1 valor el primer valor es para eje x el segundo es automatico */
+    background-size: 300px;
+    background-size: cover;
+    background-size: contain;
+    }</code></pre>
+    </p>
+    <a href="backgrounds.html#fondos-temario">👆</a>
+    <hr>
+  </section>
+  <section id="bg-repeat">
+    <h2>Background Repeat</h2>
+    <p>43 - 51</p>
+    <div class="box bg-repeat"></div>
+    <p>
+    <pre><code>/* background-repeat: define cómo se repite la imagen de fondo en el elemento */
+    .bg-repeat {
+    background-image: url(../assets/puesta-sol.jpg);
+    background-size: 100px;
+    background-repeat: repeat;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-repeat: no-repeat;
+    }</code></pre>
+    </p>
+    <a href="backgrounds.html#fondos-temario">👆</a>
+    <hr>
+  </section>
+  <section id="bg-position">
+    <h2>Background Position</h2>
+    <p>53 - 67</p>
+    <div class="box bg-position"></div>
+    <p>
+    <pre><code>/* background-position: define la posición de la imagen de fondo,
+    primer valor x segundo y,
+    sino se especifica un segundo valor éste será center aparte de valores numéricos podemos indicar el posicionamiento con
+    las palabras: center, top bottom, left and right */
+    .bg-position {
+    background-color: skyblue;
+    background-image: url(../assets/puesta-sol.jpg);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: 10px 20px;
+    background-position: 1rem 2rem;
+    background-position: 10%;
+    background-position: top left;
+    background-position: top right;
+    background-position: bottom left;
+    }</code></pre>
+    </p>
+    <a href="backgrounds.html#fondos-temario">👆</a>
+    <hr>
+  </section>
+  <section id="bg-clip">
+    <h2>Background Clip</h2>
+    <p>69 - 81</p>
+    <div class="box bg-clip"></div>
+    <p>
+    <pre><code>/* background-clip: define cuánto debe extenderse el fondo dentro del elemento. */
+    .bg-clip {
+    background-color: skyblue;
+    background-image: url(../assets/puesta-sol.jpg);
+    background-size: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*Por defecto*/
+    background-clip: border-box;
+    background-clip: padding-box;
+    background-clip: content-box;
+    padding: 1rem;
+    }</code></pre>
+    </p>
+    <a href="backgrounds.html#fondos-temario">👆</a>
+    <hr>
+  </section>
+  <section id="bg-origin">
+    <h2>Background Origin</h2>
+    <p>83 - 95</p>
+    <div class="box bg-origin"></div>
+    <p>
+    <pre><code>/* background-origin: define el origen de la imagen de fondo. */
+    .bg-origin {
+    background-color: skyblue;
+    background-image: url(../assets/puesta-sol.jpg);
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-size: cover;
+    padding: 1rem;
+    /*por defecto*/
+    background-origin: padding-box;
+    background-origin: border-box;
+    background-origin: content-box;
+    }</code></pre>
+    </p>
+    <a href="backgrounds.html#fondos-temario">👆</a>
+    <hr>
+  </section>
+  <section id="bg-attachment">
+    <h2>Background Attachment</h2>
+    <p>97 - 107</p>
+    <div class="box bg-attachment"></div>
+    <p>
+    <pre><code>/* background-attachment: define cómo se comportará la imagen de fondo al desplazarse por la página */
+    .bg-attachment {
+    background-color: skyblue;
+    background-image: url(../assets/puesta-sol.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50vh;
+    background-attachment: scroll;
+    background-size: cover;
+    background-attachment: fixed;
+    }</code></pre>
+    </p>
+    <a href="backgrounds.html#fondos-temario">👆</a>
+    <hr>
+  </section>
+  <section id="bg-art">
+    <h2>Background Art</h2>
+    <p>109 - 115</p>
+    <div class="box bg-art"></div>
+    <p>
+    <pre><code>.bg-art {
+    width: 1000px;
+    height: 70vh;
+    background: url("../assets/arbol.png") no-repeat center bottom,
+    url("../assets/aves.png") no-repeat center bottom,
+    url("../assets/cielo.png") no-repeat center top;
+    }</code></pre>
+    </p>
+    <a href="backgrounds.html#fondos-temario">👆</a>
+    <hr>
+  </section>
+  <section id="bg-multiple">
+    <h2>Background Multiple</h2>
+    <p>117 - 125</p>
+    <div class="box bg-multiple"></div>
+    <p>
+    <pre><code>.bg-multiple {
+    width: 50%;
+    height: 30vh;
+    background-image: url("../assets/favicon.png"),
+    url("../assets/puesta-sol.jpg");
+    background-repeat: repeat-x, no-repeat;
+    background-size: cover;
+    background-size: 10%, cover;
+    }</code></pre>
     </p>
     <a href="backgrounds.html#fondos-temario">👆</a>
     <hr>
