@@ -17,8 +17,8 @@ img {
 
 .box {
   border: thick solid black;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -50,4 +50,12 @@ img {
   /* text-shadow: mov-x mov-y radius-blur color; */
   text-shadow: -1rem -1rem .5rem palevioletred, 1rem 1rem .5rem black;
   box-shadow: -1rem -1rem 1rem 1rem #F00 inset, 1rem 1rem 1rem 1rem #F00;
+}
+
+/****************************************Drop Shadow*******************************************/
+
+.drop-shadow {
+  /* filter: drop-shadow(mov-x mov-y blur-radius color); */
+  filter: drop-shadow(1rem 1rem 1rem red);
+  margin-bottom: 2rem;
 }
