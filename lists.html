@@ -15,15 +15,90 @@
     <h2>Temario de Listas en CSS:</h2>
     <ul>
       <li><a href="index.html#temario">Volver al Temario Principal</a></li>
-      <li><a href="lists.html#"></a></li>
+      <li><a href="lists.html#type">Estilo de Tipo de Listas</a></li>
+      <li><a href="lists.html#img">Imagenes de Tipo de Listas</a></li>
+      <li><a href="lists.html#position">Posición de Tipos de Listas</a></li>
     </ul>
     <hr>
   </section>
-  <section id="">
-    <h2></h2>
-    <p>11 - 16</p>
+  <section id="type">
+    <h2>Estilo de Tipo de Listas</h2>
+    <p>16 - 25</p>
+    <ul class="list">
+      <li>Primavera</li>
+      <li>Verano</li>
+      <li>Invierno</li>
+      <li>Otoño</li>
+    </ul>
     <p>
-    <pre><code></code></pre>
+    <pre><code>/*********************************Estilo de Tipo de Listas*************************************/
+    
+    .list {
+    /* default */
+    list-style-type: disc;
+    list-style-type: square;
+    list-style-type: upper-roman;
+    list-style-type: decimal-leading-zero;
+    list-style-type: lower-greek;
+    }</code></pre>
+    </p>
+    <a href="lists.html#temario-listas">👆</a>
+    <hr>
+  </section>
+  <section id="img">
+    <h2>Imagenes de Tipo de Listas</h2>
+    <p>27 - 45</p>
+    <ul class="list-2">
+      <li>Primavera</li>
+      <li>Verano</li>
+      <li>Invierno</li>
+      <li>Otoño</li>
+    </ul>
+    <p>
+    <pre><code>/********************************Imagenes de Tipo de Listas************************************/
+    
+    .list-2 {
+    list-style-image: url("../assets/favicon.png");
+    /* default */
+    list-style-image: none;
+    list-style-type: none;
+    }
+    
+    .list-2 li::before {
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-image: url("../assets/favicon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    }</code></pre>
+    </p>
+    <a href="lists.html#temario-listas">👆</a>
+    <hr>
+  </section>
+  <section id="position">
+    <h2>Posición de Tipos de Listas</h2>
+    <p>47 - 57</p>
+    <ul class="list-3">
+      <li>Primavera</li>
+      <li>Verano</li>
+      <li>Invierno</li>
+      <li>Otoño</li>
+    </ul>
+    <p>
+    <pre><code>/********************************Posición de Tipos de Listas***********************************/
+    
+    .list-3 {
+    /* default */
+    list-style-position: outside;
+    list-style-position: inside;
+    }
+    
+    .list-3 li {
+    background-color: red;
+    }</code></pre>
     </p>
     <a href="lists.html#temario-listas">👆</a>
     <hr>

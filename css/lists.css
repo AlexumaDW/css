@@ -7,3 +7,51 @@ html {
 *::before {
   box-sizing: inherit;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*********************************Estilo de Tipo de Listas*************************************/
+
+.list {
+  /* default */
+  list-style-type: disc;
+  list-style-type: square;
+  list-style-type: upper-roman;
+  list-style-type: decimal-leading-zero;
+  list-style-type: lower-greek;
+}
+
+/********************************Imagenes de Tipo de Listas************************************/
+
+.list-2 {
+  list-style-image: url("../assets/favicon.png");
+  /* default */
+  list-style-image: none;
+  list-style-type: none;
+}
+
+.list-2 li::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-image: url("../assets/favicon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/********************************Posición de Tipos de Listas***********************************/
+
+.list-3 {
+  /* default */
+  list-style-position: outside;
+  list-style-position: inside;
+}
+
+.list-3 li {
+  background-color: red;
+}
