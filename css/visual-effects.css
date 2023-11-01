@@ -115,7 +115,7 @@ img {
   background-image: conic-gradient(from 90deg, red 0deg 120deg, white 120deg 240deg, blue 240deg);
 }
 
-/****************************Repetir degradados****************************************/
+/************************************Repetir degradados****************************************/
 
 .repeat-linear-gradient {
   background-image: repeating-linear-gradient(red 0 10px, green 10px 20px, blue 20px 30px);
@@ -127,4 +127,17 @@ img {
 
 .repeat-conic-gradient {
   background-image: repeating-conic-gradient(red 0 5%, green 5% 10%, blue 10% 15%);
+}
+
+/********************************Gráficas con Degradados***************************************/
+
+.chart-gradient {
+  background-image: conic-gradient(cyan 0 50%, magenta 50% 80%, yellow 80%);
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.donut-gradient {
+  background-image: radial-gradient(white 40%, black 40% 42%, transparent 42%), conic-gradient(cyan 0 50%, magenta 50% 80%, yellow 80%);
+  border-radius: 50%;
 }

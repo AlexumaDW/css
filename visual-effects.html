@@ -23,6 +23,7 @@
       <li><a href="visual-effects.html#radial-gradient">Degradados (Radiales)</a></li>
       <li><a href="visual-effects.html#conic-gradient">Degradados (Cónicos)</a></li>
       <li><a href="visual-effects.html#repeat-gradient">Repetir Degradados</a></li>
+      <li><a href="visual-effects.html#graphics-gradient">Gráficas con Degradados</a></li>
     </ul>
     <hr>
   </section>
@@ -187,15 +188,15 @@
   </section>
   <section id="repeat-gradient">
     <h2>Repetir Degradados</h2>
+    <p>118 - 130</p>
     <h3>Repetir Degradados Lineales</h3>
     <div class="box repeat-linear-gradient"></div>
     <h3>Repetir Degradados Radiales</h3>
     <div class="box repeat-radial-gradient"></div>
     <h3>Repetir Degradados Cónicos</h3>
     <div class="box repeat-conic-gradient"></div>
-    <p>118 - 130</p>
     <p>
-    <pre><code>/****************************Repetir degradados****************************************/
+    <pre><code>/************************************Repetir degradados****************************************/
     
     .repeat-linear-gradient {
     background-image: repeating-linear-gradient(red 0 10px, green 10px 20px, blue 20px 30px);
@@ -207,6 +208,29 @@
     
     .repeat-conic-gradient {
     background-image: repeating-conic-gradient(red 0 5%, green 5% 10%, blue 10% 15%);
+    }
+</code></pre>
+    </p>
+    <a href="visual-effects.html#temario-efectos-visuales">👆</a>
+    <hr>
+  </section>
+  <section id="graphics-gradient">
+    <h2>Gráficas con Degradados</h2>
+    <p>132 - 143</p>
+    <div class="box chart-gradient"></div>
+    <div class="box donut-gradient"></div>
+    <pre><code>/********************************Gráficas con Degradados***************************************/
+    
+    .chart-gradient {
+    background-image: conic-gradient(cyan 0 50%, magenta 50% 80%, yellow 80%);
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    }
+    
+    .donut-gradient {
+    background-image: radial-gradient(white 40%, black 40% 42%, transparent 42%), conic-gradient(cyan 0 50%, magenta 50%
+    80%, yellow 80%);
+    border-radius: 50%;
     }</code></pre>
     </p>
     <a href="visual-effects.html#temario-efectos-visuales">👆</a>
