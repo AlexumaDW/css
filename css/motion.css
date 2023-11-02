@@ -353,3 +353,35 @@ transition: property duration timing-function delay */
 .multiple-animation {
   animation: multipleAnimation1 2s infinite, multipleAnimation2 2s 3;
 }
+
+/***************************************FadeIn / FadeOut***************************************/
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  font-size: 5vh;
+  animation: fadeIn 2s linear .5s infinite alternate both;
+}
+
+.fade-out {
+  font-size: 5vh;
+  animation: fadeOut 2s linear .5s infinite alternate both;
+}

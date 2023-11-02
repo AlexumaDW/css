@@ -24,6 +24,7 @@
       <li><a href="motion.html#animations">Animaciones</a></li>
       <li><a href="motion.html#fotogramas-claves">Fotogramas Claves</a></li>
       <li><a href="motion.html#multiple-animations">Animaciones Multiples</a></li>
+      <li><a href="motion.html#fadein-fadeout">FadeIn / FadeOut</a></li>
     </ul>
     <hr>
   </section>
@@ -443,6 +444,88 @@
     
     .multiple-animation {
     animation: multipleAnimation1 2s infinite, multipleAnimation2 2s 3;
+    }</code></pre>
+    </p>
+    <a href="motion.html#temario-movimiento">👆</a>
+    <hr>
+  </section>
+  <section id="fadein-fadeout">
+    <h2>FadeIn / FadeOut</h2>
+    <p>357 - 387</p>
+    <div class="fade-in">🧔🏻</div>
+    <div class="fade-out">🧔🏻</div>
+    <p>
+    <pre><code>/***************************************FadeIn / FadeOut***************************************/
+    
+    @keyframes fadeIn {
+    0% {
+    opacity: 0;
+    }
+    
+    100% {
+    opacity: 1;
+    }
+    }
+    
+    @keyframes fadeOut {
+    0% {
+    opacity: 1;
+    }
+    
+    100% {
+    opacity: 0;
+    }
+    }
+    
+    .fade-in {
+    font-size: 5vh;
+    animation: fadeIn 2s linear .5s infinite alternate both;
+    }
+    
+    .fade-out {
+    font-size: 5vh;
+    animation: fadeOut 2s linear .5s infinite alternate both;
+    }</code></pre>
+    </p>
+    <a href="motion.html#temario-movimiento">👆</a>
+    <hr>
+  </section>
+  <section id="fadein-fadeout">
+    <h2>FadeIn / FadeOut</h2>
+    <p>357 - 387</p>
+    <div class="fade-in">🧔🏻</div>
+    <div class="fade-out">🧔🏻</div>
+    <p>
+    <pre><code>/***************************************FadeIn / FadeOut***************************************/
+    
+    @keyframes fadeIn {
+    0% {
+    opacity: 0;
+    }
+    
+    100% {
+    opacity: 1;
+    }
+    }
+    
+    @keyframes fadeOut {
+    0% {
+    opacity: 1;
+    }
+    
+    100% {
+    opacity: 0;
+    }
+    }
+    
+    .fade-in {
+    font-size: 5vh;
+    animation: fadeIn 2s linear .5s infinite alternate both;
+    }
+    
+    .fade-out {
+    font-size: 5vh;
+    animation: fadeOut 2s linear .5s infinite alternate both;
     }</code></pre>
     </p>
     <a href="motion.html#temario-movimiento">👆</a>
