@@ -292,3 +292,30 @@ transition: property duration timing-function delay */
   animation-play-state: paused;
   animation: myAwesomeAnimation 1.5s ease .2s 6 alternate both running;
 }
+
+/************************************Fotogramas Claves*****************************************/
+
+@keyframes myAwesomeAnimation2 {
+  0% {
+    opacity: 0;
+    transform: translate(0);
+  }
+
+  50% {
+    opacity: .5;
+    transform: translate(-50%);
+  }
+
+  75% {
+    transform: translate(-75%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(100%);
+  }
+}
+
+.my-animation-2 {
+  animation: myAwesomeAnimation2 2s;
+}
