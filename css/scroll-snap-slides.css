@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
   font-family: sans-serif;
-  scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 *,
@@ -13,4 +13,84 @@ html {
 img {
   max-width: 50%;
   height: auto;
+}
+
+.slides {
+  width: 100%;
+  /* Regla 1: debe tener una altura definida */
+  height: 100vh;
+  /* Regla 2: dependiendo el eje que quieres controlar la propiedad overflow debe tener el valor scroll */
+  overflow-y: scroll;
+  /* Regla 3: Activas la propiedad scroll-snap-type con los valores deseados */
+  /* scroll-snap-type: [x or inline / y or block / both][mandatory or proximity]; */
+  scroll-snap-type: block proximity;
+  scroll-snap-type: y mandatory;
+}
+
+.slide {
+  width: 100%;
+  height: inherit;
+  background-color: #1e2345;
+  /* Regla 4: Los hijos deben tener la propiedad scroll-snap-align activada con el valor deseado */
+  scroll-snap-align: center;
+}
+
+.slide:nth-child(even) {
+  background-color: #108eb4;
+}
+
+.slide-container {
+  width: 80%;
+  height: inherit;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vw;
+  color: #d9e8f0;
+}
+
+.slide-container li {
+  list-style: none;
+}
+
+.slide-container a,
+.slide-container p {
+  color: #d9e8f0;
+  font-size: 1.2vw;
+}
+
+.slide-container a:hover {
+  color: rgb(255, 145, 255);
+}
+
+.carousel {
+  border: thick solid #d938f0;
+  width: 50%;
+  height: 50vh;
+  overflow-x: hidden;
+  display: flex;
+}
+
+.carousel-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 100%);
+  overflow: scroll hidden;
+  scroll-snap-type: inline proximity;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e2345;
+  scroll-snap-align: center;
+}
+
+.carousel-slide:nth-child(even) {
+  background-color: #108eb4;
 }
