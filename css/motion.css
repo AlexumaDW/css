@@ -115,3 +115,28 @@ transition: property duration timing-function delay */
   transform: matrix(1, 2, 2, 1, 20, 10);
   transform: translate(20%, 50%) rotate(240deg) skew(10deg, 20deg) scale(.5, .3);
 }
+
+/***********************************Transformaciones 3D****************************************/
+
+.transform-3d {
+  perspective: 10rem;
+}
+
+.transform-3d img {
+  transition: transform 2s ease-in-out;
+}
+
+.transform-3d img:hover {
+  transform: translateZ(4rem);
+  transform: translateZ(-4rem);
+  transform: translate3d(4rem, 4rem, 4rem);
+  transform: scaleZ(1.5);
+  transform: scale3d(2, 2, 2);
+  transform: rotateX(60deg);
+  transform: rotateX(-60deg);
+  transform: rotateY(-60deg);
+  transform: rotateY(60deg);
+  transform: rotate3d(1, .5, 0, -45deg);
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 6, 0, 0, 0, 1, 0, 50, 100, 0, 1.1);
+  transform: rotate3d(-1, 2.5, -2, 60deg) translate3d(2rem, 50%, -3rem) scale3d(2, -1, 3);
+}
