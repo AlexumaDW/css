@@ -23,7 +23,7 @@
       <li><a href="motion.html#flip-card-2">Flip Cards 2</a></li>
       <li><a href="motion.html#animations">Animaciones</a></li>
       <li><a href="motion.html#fotogramas-claves">Fotogramas Claves</a></li>
-      <li><a href="motion.html#fotogramas-claves">Fotogramas Claves</a></li>
+      <li><a href="motion.html#multiple-animations">Animaciones Multiples</a></li>
     </ul>
     <hr>
   </section>
@@ -404,38 +404,45 @@
     <a href="motion.html#temario-movimiento">👆</a>
     <hr>
   </section>
-  <section id="fotogramas-claves">
-    <h2>Fotogramas Claves</h2>
-    <p>296 - 321</p>
-    <article class="card my-animation-2">
+  <section id="multiple-animations">
+    <h2>Animaciones Multiples</h2>
+    <p>323 - 355</p>
+    <article class="card multiple-animations">
       <img src="./assets/puesta-sol.jpg" alt="Puesta de Sol">
     </article>
     <p>
-    <pre><code>/************************************Fotogramas Claves*****************************************/
+    <pre><code>/**********************************Animaciones Multiples***************************************/
     
-    @keyframes myAwesomeAnimation2 {
+    @keyframes multipleAnimation1 {
     0% {
-    opacity: 0;
-    transform: translate(0);
+    opacity: 1;
     }
     
     50% {
-    opacity: .5;
-    transform: translate(-50%);
-    }
-    
-    75% {
-    transform: translate(-75%);
+    opacity: 0;
     }
     
     100% {
     opacity: 1;
-    transform: translate(100%);
     }
     }
     
-    .my-animation-2 {
-    animation: myAwesomeAnimation2 2s;
+    @keyframes multipleAnimation2 {
+    0% {
+    transform: translateY(0);
+    }
+    
+    50% {
+    transform: translateY(-100%);
+    }
+    
+    100% {
+    transform: translateY(0);
+    }
+    }
+    
+    .multiple-animation {
+    animation: multipleAnimation1 2s infinite, multipleAnimation2 2s 3;
     }</code></pre>
     </p>
     <a href="motion.html#temario-movimiento">👆</a>

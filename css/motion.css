@@ -319,3 +319,37 @@ transition: property duration timing-function delay */
 .my-animation-2 {
   animation: myAwesomeAnimation2 2s;
 }
+
+/**********************************Animaciones Multiples***************************************/
+
+@keyframes multipleAnimation1 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes multipleAnimation2 {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.multiple-animation {
+  animation: multipleAnimation1 2s infinite, multipleAnimation2 2s 3;
+}
