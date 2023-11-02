@@ -429,4 +429,62 @@ transition: property duration timing-function delay */
   transform: translate(0, 0);
 }
 
-/*********************************************Shake********************************************/
+/********************************************Pulse*********************************************/
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  font-size: 10vw;
+  animation: pulse 1s linear infinite;
+  display: inline-block;
+}
+
+.text {
+  font-size: 5vw;
+}
+
+@keyframes heartColor {
+  10% {
+    background-color: #d00;
+  }
+}
+
+.heart {
+  position: relative;
+  width: 10vw;
+  height: 10vw;
+}
+
+.heart::before,
+.heart::after {
+  position: absolute;
+  content: "";
+  left: 5vw;
+  top: 0;
+  width: 5vw;
+  height: 8vw;
+  background-color: #a00;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  border-radius: 5vw 5vw 0 0;
+  margin-top: 2rem;
+  animation: heartColor 1s infinite;
+}
+
+.heart::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}

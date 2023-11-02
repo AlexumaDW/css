@@ -26,6 +26,7 @@
       <li><a href="motion.html#multiple-animations">Animaciones Multiples</a></li>
       <li><a href="motion.html#fadein-fadeout">FadeIn / FadeOut</a></li>
       <li><a href="motion.html#shake">Sacudir</a></li>
+      <li><a href="motion.html#pulse">Latido</a></li>
     </ul>
     <hr>
   </section>
@@ -544,52 +545,80 @@
     <a href="motion.html#temario-movimiento">👆</a>
     <hr>
   </section>
-  <section id="shake">
-    <h2>Sacudir</h2>
-    <p>391 - 430</p>
+  <section id="pulse">
+    <h2>Latido</h2>
+    <p>432 - 490</p>
     <article class="center">
-      <div class="shake">☕</div>
+      <div class="pulse">❤️</div>
+    </article>
+    <article class="center">
+      <div class="pulse">🦊 kEnAi 🦊</div>
+    </article>
+    <article class="center">
+      <div class="text pulse">Eres el CSS de mi HTML</div>
+    </article>
+    <article class="center">
+      <div class="pulse heart"></div>
     </article>
     <p>
-    <pre><code>/*********************************************Shake********************************************/
+    <pre><code>/********************************************Pulse*********************************************/
     
-    @keyframes shake {
-    
-    10%,
-    90% {
-    transform: translate(-1px, 0);
+    @keyframes pulse {
+    0% {
+    transform: scale(1.1);
     }
     
-    20%,
-    80% {
-    transform: translate(2px, 0);
+    50% {
+    transform: scale(.8);
     }
     
-    30%,
-    50%,
-    70% {
-    transform: translate(-4px, 0);
-    }
-    
-    40%,
-    60% {
-    transform: translate(4px, 0);
+    100% {
+    transform: scale(1);
     }
     }
     
-    .shake {
+    .pulse {
     font-size: 10vw;
-    cursor: pointer;
+    animation: pulse 1s linear infinite;
     display: inline-block;
     }
     
-    .center {
-    text-align: center;
+    .text {
+    font-size: 5vw;
     }
     
-    .shake:hover {
-    animation: shake 1s cubic-bezier(.36, 0.07, 0.19, 0.97) both;
-    transform: translate(0, 0);
+    @keyframes heartColor {
+    10% {
+    background-color: #d00;
+    }
+    }
+    
+    .heart {
+    position: relative;
+    width: 10vw;
+    height: 10vw;
+    }
+    
+    .heart::before,
+    .heart::after {
+    position: absolute;
+    content: "";
+    left: 5vw;
+    top: 0;
+    width: 5vw;
+    height: 8vw;
+    background-color: #a00;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    border-radius: 5vw 5vw 0 0;
+    margin-top: 2rem;
+    animation: heartColor 1s infinite;
+    }
+    
+    .heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
     }</code></pre>
     </p>
     <a href="motion.html#temario-movimiento">👆</a>
