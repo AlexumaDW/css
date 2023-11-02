@@ -21,6 +21,7 @@
       <li><a href="motion.html#transform-origin">Origen de la Transformación</a></li>
       <li><a href="motion.html#flip-card-1">Flip Cards 1</a></li>
       <li><a href="motion.html#flip-card-2">Flip Cards 2</a></li>
+      <li><a href="motion.html#animations">Animaciones</a></li>
     </ul>
     <hr>
   </section>
@@ -308,6 +309,108 @@
     
     .flip-back {
     transform: rotateY(180deg);
+    }</code></pre>
+    </p>
+    <a href="motion.html#temario-movimiento">👆</a>
+    <hr>
+  </section>
+  <section id="animations">
+    <h2>Animaciones</h2>
+    <p>255 - 294</p>
+    <article class="card my-animation">
+      <img src="./assets/puesta-sol.jpg" alt="Puesta de Sol">
+    </article>
+    <p>
+    <pre><code>/***************************************Animaciones********************************************/
+    
+    
+    @keyframes myAwesomeAnimation {
+    from {
+    opacity: 0;
+    transform: translateX(0);
+    }
+    
+    to {
+    opacity: 1;
+    transform: translateX(100%);
+    }
+    }
+    
+    .my-animation {
+    /* animation: name duration timing-function delay iteration-count direction fill-mode play-state; */
+    animation-name: myAwesomeAnimation;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0, 1, 1, -0.02);
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    /* animation-iteration-count: infinite; */
+    animation-direction: alternate-reverse;
+    animation-direction: alternate;
+    animation-direction: reverse;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    /* Al final de la animación se queda con los estilos finales de la animación */
+    animation-fill-mode: forwards;
+    /* Al inicio de la animación se queda con los estilos finales de la animación */
+    animation-fill-mode: backwards;
+    /* Both aplica al mismo tiempo forwards y backwards */
+    animation-fill-mode: both;
+    animation-play-state: running;
+    /* en CSS no tiene sentido usar esta animación */
+    animation-play-state: paused;
+    animation: myAwesomeAnimation 1.5s ease .2s 6 alternate both running;
+    }</code></pre>
+    </p>
+    <a href="motion.html#temario-movimiento">👆</a>
+    <hr>
+  </section>
+  <section id="animations">
+    <h2>Animaciones</h2>
+    <p>255 - 294</p>
+    <article class="card my-animation">
+      <img src="./assets/puesta-sol.jpg" alt="Puesta de Sol">
+    </article>
+    <p>
+    <pre><code>/***************************************Animaciones********************************************/
+    
+    
+    @keyframes myAwesomeAnimation {
+    from {
+    opacity: 0;
+    transform: translateX(0);
+    }
+    
+    to {
+    opacity: 1;
+    transform: translateX(100%);
+    }
+    }
+    
+    .my-animation {
+    /* animation: name duration timing-function delay iteration-count direction fill-mode play-state; */
+    animation-name: myAwesomeAnimation;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0, 1, 1, -0.02);
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    /* animation-iteration-count: infinite; */
+    animation-direction: alternate-reverse;
+    animation-direction: alternate;
+    animation-direction: reverse;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    /* Al final de la animación se queda con los estilos finales de la animación */
+    animation-fill-mode: forwards;
+    /* Al inicio de la animación se queda con los estilos finales de la animación */
+    animation-fill-mode: backwards;
+    /* Both aplica al mismo tiempo forwards y backwards */
+    animation-fill-mode: both;
+    animation-play-state: running;
+    /* en CSS no tiene sentido usar esta animación */
+    animation-play-state: paused;
+    animation: myAwesomeAnimation 1.5s ease .2s 6 alternate both running;
     }</code></pre>
     </p>
     <a href="motion.html#temario-movimiento">👆</a>
