@@ -15,15 +15,70 @@
     <h2>Temario de Movimiento en CSS:</h2>
     <ul>
       <li><a href="index.html#temario">Volver al Temario Principal</a></li>
-      <li><a href="visual-effects.html#"></a></li>
+      <li><a href="motion.html#transitions">Transiciones</a></li>
     </ul>
     <hr>
   </section>
-  <section id="">
-    <h2></h2>
-    <p></p>
+  <section id="transitions">
+    <article class="transitions">
+      <h2>Transiciones</h2>
+      <div class="box"></div>
+      <section class="card">
+        <img src="./assets/puesta-sol.jpg" alt="Puesta de Sol">
+      </section>
+    </article>
+    <p>39 - 88</p>
     <p>
-    <pre><code></code></pre>
+    <pre><code>/******************************************Transiciones****************************************/
+    
+    /* Transiciones
+    transition-property
+    transition-duration
+    transition-timing-function: linear ease ease-in ease-out ease-in-out steps
+    transition-delay
+    transition: property duration timing-function delay */
+    
+    .transitions .box {
+    background-color: magenta;
+    /* transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: .1s; */
+    /* Es mala practica utilizar all por que cuando carga la interfaz web se animan todas las propiedades
+    transition: all 1s linear .5s; */
+    transition: border-color 2s linear .5s, background-color 1s ease .1s, border-radius 2s ease-in-out .1s;
+    }
+    
+    .transitions .box:hover {
+    background-color: cyan;
+    border-color: red;
+    border-radius: 2rem;
+    /* algunas propiedades no se animan
+    border-style: dashed; */
+    }
+    
+    .transitions .card {
+    transition: all 2s ease;
+    transition: opacity 1s ease-in-out,
+    border-color 3s steps(3),
+    filter 2s ease .1s,
+    box-shadow 2s linear .5s;
+    }
+    
+    .transitions .card:hover {
+    opacity: .7;
+    border-color: orchid;
+    filter: blur(.15rem);
+    box-shadow: 1rem 1rem 2rem .5rem black;
+    }
+    
+    .transitions .card img {
+    transition: object-position 2s ease-in-out 3s;
+    }
+    
+    .transitions .card img:hover {
+    object-position: 100% 0;
+    }</code></pre>
     </p>
     <a href="motion.html#temario-movimiento">👆</a>
     <hr>
