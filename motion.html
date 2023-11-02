@@ -27,6 +27,7 @@
       <li><a href="motion.html#fadein-fadeout">FadeIn / FadeOut</a></li>
       <li><a href="motion.html#shake">Sacudir</a></li>
       <li><a href="motion.html#pulse">Latido</a></li>
+      <li><a href="motion.html#loader">Espera (Cargando)</a></li>
     </ul>
     <hr>
   </section>
@@ -620,6 +621,38 @@
     transform: rotate(45deg);
     transform-origin: 100% 100%;
     }</code></pre>
+    </p>
+    <a href="motion.html#temario-movimiento">👆</a>
+    <hr>
+  </section>
+  <section id="loader">
+    <h2>Espera (Cargando)</h2>
+    <p>492 - 514</p>
+    <div class="spinner"></div>
+    <p>
+    <pre><code>/*****************************************Espera*********************************************/
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  /* background-color: #333; */
+  width: 5vw;
+  height: 5vw;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  border: .5vw solid rgba(0, 0, 0, .1);
+  border-left-color: #09f;
+  animation: spinner 1s ease-in-out infinite;
+}</code></pre>
     </p>
     <a href="motion.html#temario-movimiento">👆</a>
     <hr>
