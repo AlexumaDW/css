@@ -25,6 +25,7 @@
       <li><a href="motion.html#fotogramas-claves">Fotogramas Claves</a></li>
       <li><a href="motion.html#multiple-animations">Animaciones Multiples</a></li>
       <li><a href="motion.html#fadein-fadeout">FadeIn / FadeOut</a></li>
+      <li><a href="motion.html#shake">Sacudir</a></li>
     </ul>
     <hr>
   </section>
@@ -451,7 +452,7 @@
   </section>
   <section id="fadein-fadeout">
     <h2>FadeIn / FadeOut</h2>
-    <p>357 - 387</p>
+    <p>357 - 389</p>
     <div class="fade-in">🧔🏻</div>
     <div class="fade-out">🧔🏻</div>
     <p>
@@ -478,54 +479,117 @@
     }
     
     .fade-in {
-    font-size: 5vh;
+    font-size: 10vw;
     animation: fadeIn 2s linear .5s infinite alternate both;
+    text-align: center;
     }
     
     .fade-out {
-    font-size: 5vh;
+    font-size: 10vw;
     animation: fadeOut 2s linear .5s infinite alternate both;
+    text-align: center;
     }</code></pre>
     </p>
     <a href="motion.html#temario-movimiento">👆</a>
     <hr>
   </section>
-  <section id="fadein-fadeout">
-    <h2>FadeIn / FadeOut</h2>
-    <p>357 - 387</p>
-    <div class="fade-in">🧔🏻</div>
-    <div class="fade-out">🧔🏻</div>
+  <section id="shake">
+    <h2>Sacudir</h2>
+    <p>391 - 430</p>
+    <article class="center">
+      <div class="shake">☕</div>
+    </article>
     <p>
-    <pre><code>/***************************************FadeIn / FadeOut***************************************/
+    <pre><code>/*********************************************Shake********************************************/
     
-    @keyframes fadeIn {
-    0% {
-    opacity: 0;
-    }
+    @keyframes shake {
     
-    100% {
-    opacity: 1;
-    }
+    10%,
+    90% {
+    transform: translate(-1px, 0);
     }
     
-    @keyframes fadeOut {
-    0% {
-    opacity: 1;
+    20%,
+    80% {
+    transform: translate(2px, 0);
     }
     
-    100% {
-    opacity: 0;
+    30%,
+    50%,
+    70% {
+    transform: translate(-4px, 0);
+    }
+    
+    40%,
+    60% {
+    transform: translate(4px, 0);
     }
     }
     
-    .fade-in {
-    font-size: 5vh;
-    animation: fadeIn 2s linear .5s infinite alternate both;
+    .shake {
+    font-size: 10vw;
+    cursor: pointer;
+    display: inline-block;
     }
     
-    .fade-out {
-    font-size: 5vh;
-    animation: fadeOut 2s linear .5s infinite alternate both;
+    .center {
+    text-align: center;
+    }
+    
+    .shake:hover {
+    animation: shake 1s cubic-bezier(.36, 0.07, 0.19, 0.97) both;
+    transform: translate(0, 0);
+    }</code></pre>
+    </p>
+    <a href="motion.html#temario-movimiento">👆</a>
+    <hr>
+  </section>
+  <section id="shake">
+    <h2>Sacudir</h2>
+    <p>391 - 430</p>
+    <article class="center">
+      <div class="shake">☕</div>
+    </article>
+    <p>
+    <pre><code>/*********************************************Shake********************************************/
+    
+    @keyframes shake {
+    
+    10%,
+    90% {
+    transform: translate(-1px, 0);
+    }
+    
+    20%,
+    80% {
+    transform: translate(2px, 0);
+    }
+    
+    30%,
+    50%,
+    70% {
+    transform: translate(-4px, 0);
+    }
+    
+    40%,
+    60% {
+    transform: translate(4px, 0);
+    }
+    }
+    
+    .shake {
+    font-size: 10vw;
+    cursor: pointer;
+    display: inline-block;
+    }
+    
+    .center {
+    text-align: center;
+    }
+    
+    .shake:hover {
+    animation: shake 1s cubic-bezier(.36, 0.07, 0.19, 0.97) both;
+    transform: translate(0, 0);
     }</code></pre>
     </p>
     <a href="motion.html#temario-movimiento">👆</a>
