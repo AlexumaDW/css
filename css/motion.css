@@ -568,3 +568,64 @@ transition: property duration timing-function delay */
 .anim-bg-gradient:hover {
   background-position: 100% 0;
 }
+
+/************************************Menú de Pestañas******************************************/
+
+.tabs-menu {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ddd;
+  padding: 1rem;
+  width: 70%;
+  border-radius: 1rem;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tabs-menu input[type="radio"] {
+  display: none;
+}
+
+.tabs-menu label {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  width: calc(100% / 4 - .5rem);
+  z-index: 10;
+}
+
+.tabs-menu label:hover {
+  color: white;
+}
+
+.tabs-menu input[type="radio"]:checked+label {
+  color: white;
+}
+
+.tab-bg-hover {
+  position: absolute;
+  width: calc(100% / 4 - .5rem);
+  height: 2rem;
+  border-radius: 2rem;
+  background-image: linear-gradient(90deg, #a00, #d00);
+  transition: transform .3s ease;
+}
+
+#tab-1:checked~.tab-bg-hover {
+  transform: translateX(0);
+}
+
+#tab-2:checked~.tab-bg-hover {
+  transform: translateX(100%);
+}
+
+#tab-3:checked~.tab-bg-hover {
+  transform: translateX(200%);
+}
+
+#tab-4:checked~.tab-bg-hover {
+  transform: translateX(300%);
+}

@@ -28,6 +28,7 @@
       <li><a href="motion.html#shake">Sacudir</a></li>
       <li><a href="motion.html#pulse">Latido</a></li>
       <li><a href="motion.html#btn">Botón Animado</a></li>
+      <li><a href="motion.html#tabs">Menú de Pestañas (Tabs)</a></li>
     </ul>
     <hr>
   </section>
@@ -659,13 +660,146 @@
   </section>
   <section id="btn">
     <h2>Botón Animado</h2>
-    <p>516 - </p>
+    <p>516 - 570</p>
     <button class="btn anim-bottom to-left">Animación Izquierda</button>
     <button class="btn anim-bottom to-center">Animación Centro</button>
     <button class="btn anim-bottom to-right">Animación Derecha</button>
     <button class="btn anim-bg-gradient">Fondo con Gradiente</button>
     <p>
-    <pre><code></code></pre>
+    <pre><code>/*************************************Botón animado********************************************/
+    
+    .btn {
+    position: relative;
+    border: none;
+    border-radius: .25rem;
+    padding: .25rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: .25rem .25rem .5rem .25rem rgba(0, 0, 0, .15);
+    }
+    
+    .anim-bottom::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    height: .25rem;
+    background-color: #d00;
+    transition: width .5s ease, left .5s ease, right .5s ease;
+    }
+    
+    .anim-bottom:hover::after {
+    width: 100%;
+    }
+    
+    .to-left::after {
+    left: 0;
+    }
+    
+    .to-center::after {
+    left: 50%;
+    }
+    
+    .to-right::after {
+    right: 0;
+    }
+    
+    .to-center:hover::after {
+    left: 0;
+    }
+    
+    .anim-bg-gradient {
+    background-image: linear-gradient(to right, pink, violet, orange, orangered);
+    background-size: 300% 100%;
+    transition: background-position .5s ease-in-out;
+    }
+    
+    
+    .anim-bg-gradient:hover {
+    background-position: 100% 0;
+    }</code></pre>
+    </p>
+    <a href="motion.html#temario-movimiento">👆</a>
+    <hr>
+  </section>
+  <section id="tabs">
+    <h2>Menú de Pestañas (Tabs)</h2>
+    <p>572 - 631</p>
+    <nav class="tabs-menu">
+      <input type="radio" id="tab-1" name="tabs">
+      <label for="tab-1">Sección 1</label>
+      <input type="radio" id="tab-2" name="tabs">
+      <label for="tab-2">Sección 2</label>
+      <input type="radio" id="tab-3" name="tabs">
+      <label for="tab-3">Sección 3</label>
+      <input type="radio" id="tab-4" name="tabs">
+      <label for="tab-4">Sección 4</label>
+      <div class="tab-bg-hover"></div>
+    </nav>
+    <p>
+    <pre><code>/************************************Menú de Pestañas******************************************/
+    
+    .tabs-menu {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ddd;
+    padding: 1rem;
+    width: 70%;
+    border-radius: 1rem;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    
+    .tabs-menu input[type="radio"] {
+    display: none;
+    }
+    
+    .tabs-menu label {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    width: calc(100% / 4 - .5rem);
+    z-index: 10;
+    }
+    
+    .tabs-menu label:hover {
+    color: white;
+    }
+    
+    .tabs-menu input[type="radio"]:checked+label {
+    color: white;
+    }
+    
+    .tab-bg-hover {
+    position: absolute;
+    width: calc(100% / 4 - .5rem);
+    height: 2rem;
+    border-radius: 2rem;
+    background-image: linear-gradient(90deg, #a00, #d00);
+    transition: transform .3s ease;
+    }
+    
+    #tab-1:checked~.tab-bg-hover {
+    transform: translateX(0);
+    }
+    
+    #tab-2:checked~.tab-bg-hover {
+    transform: translateX(100%);
+    }
+    
+    #tab-3:checked~.tab-bg-hover {
+    transform: translateX(200%);
+    }
+    
+    #tab-4:checked~.tab-bg-hover {
+    transform: translateX(300%);
+    }</code></pre>
     </p>
     <a href="motion.html#temario-movimiento">👆</a>
     <hr>
