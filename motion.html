@@ -30,6 +30,7 @@
       <li><a href="motion.html#btn">Botón Animado</a></li>
       <li><a href="motion.html#tabs">Menú de Pestañas (Tabs)</a></li>
       <li><a href="motion.html#burger-menu">Menú de Hamburguesa</a></li>
+      <li><a href="motion.html#off-canvas-menu">Menú off Canvas</a></li>
     </ul>
     <hr>
   </section>
@@ -876,6 +877,71 @@
     
     .off-canvas-btn:checked+.off-canvas-burger::after {
     transform: rotate(-45deg) translate(.6vw, -.5vw);
+    }</code></pre>
+    </p>
+    <a href="motion.html#temario-movimiento">👆</a>
+    <hr>
+  </section>
+  <section id="canvas-menu">
+    <h2>Menú off Canvas</h2>
+    <p>691 - 736</p>
+    <!-- <input type="checkbox" class="off-canvas-btn">
+    <label class="off-canvas-burger"></label> -->
+    <nav class="off-canvas-menu">
+      <div class="off-canvas-menu-container">
+        <a href="#" class="off-canvas-link">Sección 1</a>
+        <a href="#" class="off-canvas-link">Sección 2</a>
+        <a href="#" class="off-canvas-link">Sección 3</a>
+        <a href="#" class="off-canvas-link">Sección 4</a>
+        <a href="#" class="off-canvas-link">Sección 5</a>
+      </div>
+    </nav>
+    <p>
+    <pre><code>/***************************************Menú off Canvas****************************************/
+    
+    .off-canvas-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 97;
+    transition: transform .5s ease-in-out;
+    transform: translate(0, -100%);
+    }
+    
+    .off-canvas-menu-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+    
+    .off-canvas-link:first-child {
+    border-top: thin solid rgb(255, 0, 0);
+    }
+    
+    .off-canvas-link {
+    padding: 2rem;
+    border-bottom: thin solid rgb(255, 0, 0);
+    font-size: 1vw;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    transition: background-color .3s ease;
+    }
+    
+    .off-canvas-link:hover {
+    background-color: rgba(255, 0, 0, .2);
+    }
+    
+    .off-canvas-btn:checked~.off-canvas-menu {
+    transform: translate(0, 0);
     }</code></pre>
     </p>
     <a href="motion.html#temario-movimiento">👆</a>
