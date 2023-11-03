@@ -792,3 +792,45 @@ transition: property duration timing-function delay */
   background-color: #a00;
   transform: scale(1.2);
 }
+
+/*************************************Intro Star Wars******************************************/
+
+@keyframes introStarWars {
+  0% {
+    transform: perspective(100vh) rotateX(15deg) translateY(100%);
+  }
+
+  100% {
+    transform: perspective(100vh) rotateX(25deg) translateY(-200%);
+  }
+}
+
+.star-wars {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  color: #ffb13a;
+  background-image: url(../assets/stars.gif);
+}
+
+.star-wars-container {
+  width: 80%;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 1rem;
+  animation: introStarWars 20s linear infinite;
+}
+
+.star-wars h2,
+.star-wars h3 {
+  font-size: 4vw;
+  text-align: center;
+}
+
+.star-wars p {
+  font-size: 3vw;
+  line-height: 4rem;
+}

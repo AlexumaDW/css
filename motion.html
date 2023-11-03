@@ -1031,94 +1031,83 @@
     <a href="motion.html#temario-movimiento">👆</a>
     <hr>
   </section>
-  <section id="modal-window">
-    <section id="intro-stars-wars">
-      <h2>Intro Star Wars</h2>
-      <p>738 - 794</p>
-      <a href="#modal-1">Abrir Modal</a>
-      <article id="modal-1" class="modal">
-        <div class="modal-container">
-          <a href="#cerrar" class="modal-close">X</a>
-          <h2>Esto es una ventana modal</h2>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit mollitia modi rerum sapiente? Dolore
-            nesciunt nemo nisi inventore aperiam incidunt, tenetur error deserunt fuga ipsa voluptatum placeat, itaque
-            totam reprehenderit!</p>
-          <ul>
-            <li><a href="">Enlace</a></li>
-            <li><a href="">Enlace</a></li>
-            <li><a href="">Enlace</a></li>
-            <li><a href="">Enlace</a></li>
-            <li><a href="">Enlace</a></li>
-            <li><a href="">Enlace</a></li>
-          </ul>
-        </div>
-      </article>
-      <p>
-      <pre><code>/***************************************Ventana Modal******************************************/
-    
-    .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, .3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 96;
-    transition: opacity.5s ease-in-out;
-    opacity: 0;
-    pointer-events: none;
-    }
-    
-    .modal:target {
-    opacity: 1;
-    pointer-events: auto;
-    }
-    
-    .modal-container {
-    position: relative;
-    border: thick double #d00;
-    border-radius: .5vw;
-    padding: 1vw;
-    width: 70%;
-    height: 70vh;
-    background-color: white;
-    display: flex;
-    overflow: hidden;
-    flex-direction: column;
-    
-    }
-    
-    .modal-close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    width: 3rem;
-    height: 3rem;
-    font-size: 2rem;
-    text-align: center;
-    text-decoration: none;
-    line-height: 3rem;
-    color: white;
-    background-color: rgb(255, 0, 0);
-    border-radius: 50%;
-    transition: background-color .3s linear, transform .3s ease-in-out;
-    }
-    
-    .modal-close:hover {
-    background-color: #a00;
-    transform: scale(1.2);
-    }</code></pre>
-      </p>
-      <a href="motion.html#temario-movimiento">👆</a>
-      <hr>
-    </section>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br>
+  <section id="intro-stars-wars">
+    <h2>Intro Star Wars</h2>
+    <p>796 - 836</p>
+    <h3>Star Wars Intro</h3>
+    <article class="star-wars">
+      <div class="star-wars-container">
+        <h2>Episode III</h2>
+        <h3>REVENGE OF THE SITH</h3>
+        <p>War! The Republic is crumbling
+          under attacks by the ruthless
+          Sith Lord, Count Dooku.
+          There are heroes on both sides.
+          Evil is everywhere. </p>
+        <p>In a stunning move, the
+          fiendish droid leader, General
+          Grievous, has swept into the
+          Republic capital and kidnapped
+          Chancellor Palpatine, leader of
+          the Galactic Senate.</p>
+        <p>As the Separatist Droid Army
+          attempts to flee the besieged
+          capital with their valuable
+          hostage, two Jedi Knights lead a
+          desperate mission to rescue the
+          captive Chancellor....</p>
+      </div>
+    </article>
+    <p>
+    <pre><code>/*************************************Intro Star Wars******************************************/
+      
+      @keyframes introStarWars {
+      0% {
+      transform: perspective(100vh) rotateX(15deg) translateY(100%);
+      }
+      
+      100% {
+      transform: perspective(100vh) rotateX(25deg) translateY(-200%);
+      }
+      }
+      
+      .star-wars {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      color: #ffb13a;
+      background-image: url(../assets/stars.gif);
+      }
+      
+      .star-wars-container {
+      width: 80%;
+      text-align: justify;
+      margin-left: auto;
+      margin-right: auto;
+      letter-spacing: 1rem;
+      animation: introStarWars 20s linear infinite;
+      }
+      
+      .star-wars h2,
+      .star-wars h3 {
+      font-size: 4vw;
+      text-align: center;
+      }
+      
+      .star-wars p {
+      font-size: 3vw;
+      line-height: 4rem;
+      }</code></pre>
+    </p>
+    <a href="motion.html#temario-movimiento">👆</a>
+    <hr>
+  </section>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br>
 </body>
 
 </html>
