@@ -30,7 +30,8 @@
       <li><a href="motion.html#btn">Botón Animado</a></li>
       <li><a href="motion.html#tabs">Menú de Pestañas (Tabs)</a></li>
       <li><a href="motion.html#burger-menu">Menú de Hamburguesa</a></li>
-      <li><a href="motion.html#off-canvas-menu">Menú off Canvas</a></li>
+      <li><a href="motion.html#modal-window">Ventana Modal</a></li>
+      <li><a href="motion.html#intro-stars-wars">Intro Star Wars</a></li>
     </ul>
     <hr>
   </section>
@@ -947,10 +948,177 @@
     <a href="motion.html#temario-movimiento">👆</a>
     <hr>
   </section>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br>
+  <section id="modal-window">
+    <h2>Ventana Modal</h2>
+    <p>738 - 794</p>
+    <a href="#modal-1">Abrir Modal</a>
+    <article id="modal-1" class="modal">
+      <div class="modal-container">
+        <a href="#cerrar" class="modal-close">X</a>
+        <h2>Esto es una ventana modal</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit mollitia modi rerum sapiente? Dolore
+          nesciunt nemo nisi inventore aperiam incidunt, tenetur error deserunt fuga ipsa voluptatum placeat, itaque
+          totam reprehenderit!</p>
+        <ul>
+          <li><a href="">Enlace</a></li>
+          <li><a href="">Enlace</a></li>
+          <li><a href="">Enlace</a></li>
+          <li><a href="">Enlace</a></li>
+          <li><a href="">Enlace</a></li>
+          <li><a href="">Enlace</a></li>
+        </ul>
+      </div>
+    </article>
+    <p>
+    <pre><code>/***************************************Ventana Modal******************************************/
+    
+    .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 96;
+    transition: opacity.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    }
+    
+    .modal:target {
+    opacity: 1;
+    pointer-events: auto;
+    }
+    
+    .modal-container {
+    position: relative;
+    border: thick double #d00;
+    border-radius: .5vw;
+    padding: 1vw;
+    width: 70%;
+    height: 70vh;
+    background-color: white;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    
+    }
+    
+    .modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
+    line-height: 3rem;
+    color: white;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    transition: background-color .3s linear, transform .3s ease-in-out;
+    }
+    
+    .modal-close:hover {
+    background-color: #a00;
+    transform: scale(1.2);
+    }</code></pre>
+    </p>
+    <a href="motion.html#temario-movimiento">👆</a>
+    <hr>
+  </section>
+  <section id="modal-window">
+    <section id="intro-stars-wars">
+      <h2>Intro Star Wars</h2>
+      <p>738 - 794</p>
+      <a href="#modal-1">Abrir Modal</a>
+      <article id="modal-1" class="modal">
+        <div class="modal-container">
+          <a href="#cerrar" class="modal-close">X</a>
+          <h2>Esto es una ventana modal</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit mollitia modi rerum sapiente? Dolore
+            nesciunt nemo nisi inventore aperiam incidunt, tenetur error deserunt fuga ipsa voluptatum placeat, itaque
+            totam reprehenderit!</p>
+          <ul>
+            <li><a href="">Enlace</a></li>
+            <li><a href="">Enlace</a></li>
+            <li><a href="">Enlace</a></li>
+            <li><a href="">Enlace</a></li>
+            <li><a href="">Enlace</a></li>
+            <li><a href="">Enlace</a></li>
+          </ul>
+        </div>
+      </article>
+      <p>
+      <pre><code>/***************************************Ventana Modal******************************************/
+    
+    .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 96;
+    transition: opacity.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    }
+    
+    .modal:target {
+    opacity: 1;
+    pointer-events: auto;
+    }
+    
+    .modal-container {
+    position: relative;
+    border: thick double #d00;
+    border-radius: .5vw;
+    padding: 1vw;
+    width: 70%;
+    height: 70vh;
+    background-color: white;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    
+    }
+    
+    .modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
+    line-height: 3rem;
+    color: white;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    transition: background-color .3s linear, transform .3s ease-in-out;
+    }
+    
+    .modal-close:hover {
+    background-color: #a00;
+    transform: scale(1.2);
+    }</code></pre>
+      </p>
+      <a href="motion.html#temario-movimiento">👆</a>
+      <hr>
+    </section>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
 </body>
 
 </html>
